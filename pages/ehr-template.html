@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>EHR Template / Dot Phrase — ND Cessation Dashboard</title>
+<link rel="stylesheet" href="../styles.css" />
+<link rel="stylesheet" href="_shared.css" />
+</head>
+<body class="subpage">
+<header class="topbar">
+  <div class="brand">
+    <div class="logo">ND</div>
+    <div>
+      <h1>North Dakota Youth Tobacco &amp; Nicotine Cessation</h1>
+      <p class="sub">Clinician One-Stop Shop · Advisory Council Aligned Dashboard</p>
+    </div>
+  </div>
+  <nav class="tabs">
+    <a class="tab" href="../index.html">← Back to Dashboard</a>
+  </nav>
+</header>
+<main>
+  <div class="crumb"><a href="../index.html">Dashboard</a> · Treatment Algorithm · Step 1</div>
+  <h1 class="page-title">EHR Template / Dot Phrase</h1>
+  <p class="lede">Drop-in template for Epic, Cerner, and Athena. Covers screening, assessment, plan, and ICD-10 codes.</p>
+  <div class="card">
+    
+<h3>Smart phrase: <code>.youthnicotine</code></h3>
+<div class="script-block" style="font-style:normal;font-family:monospace;font-size:13px;">
+TOBACCO / NICOTINE / VAPE SCREEN<br/>
+Status: *** (never / former / current)<br/>
+Product(s): *** (cigarettes / vape / pouch / chew / cigar)<br/>
+Frequency: *** per day<br/>
+Time to first use: *** min after waking<br/>
+Readiness to quit (0–10): ***<br/>
+Co-use: *** (cannabis / alcohol / none)<br/>
+<br/>
+Advice given: *** (brief / extended)<br/>
+Plan: *** (NRT / counseling / referral / re-screen)<br/>
+Referral: *** (ND Quits / MyLifeMyQuit / counselor)<br/>
+Follow-up: *** weeks
+</div>
+
+<h3>ICD-10 codes</h3>
+<table>
+<thead><tr><th>Code</th><th>Description</th></tr></thead>
+<tbody>
+<tr><td>F17.210</td><td>Nicotine dependence, cigarettes, uncomplicated</td></tr>
+<tr><td>F17.290</td><td>Nicotine dependence, other tobacco / vape</td></tr>
+<tr><td>Z71.6</td><td>Tobacco abuse counseling</td></tr>
+<tr><td>Z72.0</td><td>Tobacco use (non-dependent)</td></tr>
+</tbody>
+</table>
+
+<div class="callout"><strong>Tip:</strong> Ask your EHR team to add a dropdown for "vape" and "pouch" — current SNOMED defaults often miss these.</div>
+
+  </div>
+  <a href="../index.html" class="back-btn">← Back to Dashboard</a>
+</main>
+<footer><p>Built from Advisory Council meeting · 05/19/2026 · v1.2</p></footer>
+</body>
+</html>

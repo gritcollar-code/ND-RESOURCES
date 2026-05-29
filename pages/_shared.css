@@ -1,0 +1,53 @@
+/* Subpage layout — inherits from ../styles.css */
+.subpage main { max-width: 900px; }
+.crumb {
+  font-size: 13px; color: var(--muted);
+  margin-bottom: 18px;
+}
+.crumb a { color: var(--green-700); font-weight: 500; }
+.subpage h1.page-title {
+  font-size: 26px; color: var(--green-900);
+  margin-bottom: 6px; letter-spacing: -0.02em;
+}
+.subpage .lede {
+  color: var(--bark); font-size: 15px; margin-bottom: 22px;
+}
+.subpage section.block { margin: 24px 0; }
+.subpage table {
+  width: 100%; border-collapse: collapse; margin: 14px 0;
+  font-size: 14px;
+}
+.subpage th, .subpage td {
+  text-align: left; padding: 10px 14px;
+  border-bottom: 1px solid var(--line);
+}
+.subpage th {
+  background: var(--cream); color: var(--green-900);
+  font-weight: 600; font-size: 12px;
+  text-transform: uppercase; letter-spacing: 0.5px;
+}
+.subpage tr:last-child td { border-bottom: none; }
+.script-block {
+  background: var(--cream);
+  border-left: 3px solid var(--gold);
+  padding: 16px 20px;
+  border-radius: 4px;
+  font-style: italic;
+  color: var(--bark);
+  margin: 12px 0;
+}
+.callout {
+  background: var(--green-100);
+  border-left: 3px solid var(--green-700);
+  padding: 14px 18px;
+  border-radius: 4px;
+  margin: 16px 0;
+  font-size: 14px;
+}
+.back-btn {
+  display: inline-block; margin-top: 24px;
+  background: var(--green-700); color: var(--cream);
+  padding: 10px 18px; border-radius: 6px;
+  font-size: 13px; font-weight: 500;
+}
+.back-btn:hover { background: var(--green-900); text-decoration: none; color: var(--cream); }

@@ -1,0 +1,386 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>ND Youth Tobacco & Nicotine Cessation — Clinician Dashboard</title>
+<link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+<header class="topbar">
+  <div class="brand">
+    <div class="logo">ND</div>
+    <div>
+      <h1>North Dakota Youth Tobacco &amp; Nicotine Cessation</h1>
+      <p class="sub">Clinician One-Stop Shop · Advisory Council Aligned Dashboard</p>
+    </div>
+  </div>
+  <nav class="tabs">
+    <button class="tab active" data-tab="overview">Overview</button>
+    <button class="tab" data-tab="algorithm">Treatment Algorithm</button>
+    <button class="tab" data-tab="resources">Resources Hub</button>
+    <button class="tab" data-tab="cme">CME Module</button>
+    <button class="tab" data-tab="standing">Standing Orders</button>
+  </nav>
+</header>
+
+<main>
+
+<!-- ============== OVERVIEW ============== -->
+<section id="overview" class="panel active">
+  <div class="hero">
+    <h2>A simpler path from <em>ask</em> to <em>treat</em>.</h2>
+    <p>One umbrella. One algorithm. One phone number. Built around the priorities your advisory council laid out on May 19, 2026.</p>
+  </div>
+
+  <div class="two-col">
+    <div class="card">
+      <h2>Advisory Council Priorities</h2>
+      <ul class="checklist">
+        <li><strong>One umbrella resource</strong> — single entry point (ND Quits) that routes to all paths.</li>
+        <li><strong>Click-through algorithm</strong> with hyperlinks for dosing, off-label evidence, referrals, and parental consent.</li>
+        <li><strong>Printable standing orders</strong> embedded in workflow.</li>
+        <li><strong>Short, Category-1 CME</strong> (AMA / ACGME accredited) — bang-for-the-buck.</li>
+        <li><strong>Vape &amp; pouch → NRT translation</strong> dosing tables.</li>
+        <li><strong>Emerging product</strong> info — only if maintainable / auto-updated.</li>
+        <li><strong>Cessation counselor directory</strong> as a first-class link.</li>
+        <li><strong>Policy advocacy</strong> — parental consent age, pharmacist scope expansion.</li>
+      </ul>
+    </div>
+
+    <div class="card">
+      <h2>Where to focus next</h2>
+      <div class="gap"><span class="badge">Priority</span> Build clinician awareness that most youth users <em>want</em> to quit.</div>
+      <div class="gap"><span class="badge">Priority</span> Educate on AAP off-label NRT recommendation for youth.</div>
+      <div class="gap"><span class="badge soft">Opportunity</span> Improve awareness of national resources beyond ND Quits.</div>
+      <div class="gap"><span class="badge soft">Opportunity</span> Close the "Ask &amp; Advise → Treat &amp; Refer" cliff.</div>
+      <div class="gap"><span class="badge soft">Opportunity</span> EHRs that capture full range of nicotine/vape products.</div>
+      <div class="gap"><span class="badge">Priority</span> Pharmacist scope-of-practice for &lt; 18 prescribing.</div>
+    </div>
+  </div>
+
+  <div class="card">
+    <h2>Quick Actions</h2>
+    <div class="action-row">
+      <a class="action" href="#algorithm" data-jump="algorithm"><b>1</b><span>Open Treatment Algorithm</span></a>
+      <a class="action" href="#resources" data-jump="resources"><b>2</b><span>Call ND Quits / Refer</span></a>
+      <a class="action" href="#standing" data-jump="standing"><b>3</b><span>Print Standing Order</span></a>
+      <a class="action" href="#cme" data-jump="cme"><b>4</b><span>Claim Free CME</span></a>
+    </div>
+  </div>
+</section>
+
+<!-- ============== ALGORITHM ============== -->
+<section id="algorithm" class="panel">
+  <div class="card">
+    <h2>Click-Through Treatment Algorithm</h2>
+    <p class="muted">Printable at any step. Hyperlinks for dosing, off-label evidence, referrals, and consent.</p>
+
+    <div class="algo">
+
+      <div class="step">
+        <div class="step-num">1</div>
+        <div class="step-body">
+          <h3>Screen at every health supervision visit (ages ≥ 10)</h3>
+          <p>Ask: <em>"Have you ever tried smoking, vaping, nicotine pouches, or chew?"</em></p>
+          <div class="links">
+            <a href="pages/screening-script.html" class="link">AAP screening script</a>
+            <a href="pages/ehr-template.html" class="link">EHR template (.dot phrase)</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="branch">
+        <div class="step yes">
+          <div class="step-num">2A</div>
+          <div class="step-body">
+            <h3>Positive screen → Assess</h3>
+            <ul>
+              <li>Product type (vape pod, pouch, cigarette, chew)</li>
+              <li>Frequency &amp; nicotine strength</li>
+              <li>Readiness to quit (motivational interview)</li>
+              <li>Co-use (cannabis, alcohol)</li>
+            </ul>
+            <div class="links">
+              <a href="pages/nrt-translator.html" class="link">Vape/pouch → NRT translator</a>
+              <a href="pages/mi-prompts.html" class="link">MI prompts cheat sheet</a>
+            </div>
+          </div>
+        </div>
+        <div class="step no">
+          <div class="step-num">2B</div>
+          <div class="step-body">
+            <h3>Negative screen → Prevent</h3>
+            <p>Brief positive reinforcement + counsel on vape/pouch risks. Document &amp; re-screen next visit.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="step">
+        <div class="step-num">3</div>
+        <div class="step-body">
+          <h3>Determine pathway by age &amp; consent</h3>
+          <div class="age-grid">
+            <div class="age-card">
+              <h4>Under 14</h4>
+              <p>Parental consent required for most pharmacotherapy. Lean on counseling + family-based intervention.</p>
+              <a href="pages/family-guide.html" class="link">Family conversation guide</a>
+            </div>
+            <div class="age-card">
+              <h4>14 – 17</h4>
+              <p>Behavioral first; <strong>off-label NRT</strong> per AAP if moderate–severe addiction + motivated. Parental consent generally required in ND.</p>
+              <a href="pages/aap-nrt-evidence.html" class="link">AAP off-label NRT evidence</a>
+            </div>
+            <div class="age-card">
+              <h4>18 – 21</h4>
+              <p>Full NRT, varenicline, bupropion eligible. No parental consent. Refer ND Quits.</p>
+              <a href="pages/adult-rx.html" class="link">Adult Rx quick-reference</a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="step">
+        <div class="step-num">4</div>
+        <div class="step-body">
+          <h3>Treat — Choose intervention</h3>
+          <div class="tx-grid">
+            <div class="tx">
+              <h4>Pharmacotherapy</h4>
+              <p>Patch / gum / lozenge dosing matched to daily nicotine intake.</p>
+              <a href="pages/dosing-table.html" class="link">Dosing table</a>
+              <a href="pages/aap-nrt-evidence.html" class="link">Off-label evidence (AAP)</a>
+            </div>
+            <div class="tx">
+              <h4>Counseling</h4>
+              <p>Find a cessation counselor (in-network / tele).</p>
+              <a href="pages/counselor-directory.html" class="link">ND counselor directory</a>
+            </div>
+            <div class="tx">
+              <h4>Digital / Text Support</h4>
+              <p>My Life My Quit (youth), This Is Quitting, Quit Line callbacks.</p>
+              <a href="pages/enroll-patient.html" class="link">Enroll patient</a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="step">
+        <div class="step-num">5</div>
+        <div class="step-body">
+          <h3>Refer &amp; Follow up</h3>
+          <p>One call to <strong>ND Quits 1-800-QUIT-NOW</strong> — they triage to National Jewish, MyLifeMyQuit, or local public health units.</p>
+          <p>Schedule follow-up in 2–4 weeks. Document plan.</p>
+          <div class="links">
+            <a href="pages/referral-form.html" class="link">Print referral form</a>
+            <a href="#standing" class="link" data-jump="standing">Print standing order</a>
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+    <div class="print-row">
+      <button class="primary" onclick="window.print()">Print this algorithm</button>
+      <button class="ghost">Download PDF</button>
+    </div>
+  </div>
+</section>
+
+<!-- ============== RESOURCES ============== -->
+<section id="resources" class="panel">
+  <div class="card highlight">
+    <h2>Start Here — One-Stop Shop</h2>
+    <div class="onestop-main">
+      <h3>ND Quits</h3>
+      <p class="big">1-800-QUIT-NOW</p>
+      <p>Single triage line. ND Quits routes patients to the right program — National Jewish Health, My Life My Quit, local public health units, or counselor referral — based on age, product, and preferences.</p>
+      <a href="https://www.ndhealth.gov/ndquits" class="primary-link" target="_blank">Visit ND Quits →</a>
+    </div>
+  </div>
+
+  <div class="res-grid">
+    <div class="res-card">
+      <h3>My Life, My Quit</h3>
+      <p class="tag">Youth · Text/Chat</p>
+      <p>Free, confidential coaching for teens. Texting-based.</p>
+      <a href="https://mylifemyquit.org" target="_blank" rel="noopener" class="link">Open</a>
+    </div>
+    <div class="res-card">
+      <h3>National Jewish Health</h3>
+      <p class="tag">Tele-coaching</p>
+      <p>Quitline back-end provider — phone coaching, NRT for eligible patients.</p>
+      <a href="https://www.nationaljewish.org" target="_blank" rel="noopener" class="link">Open</a>
+    </div>
+    <div class="res-card">
+      <h3>AAP Youth Cessation Toolkit</h3>
+      <p class="tag">Clinical guidance</p>
+      <p>Off-label NRT recommendations, scripts, and screening tools.</p>
+      <a href="https://www.aap.org/en/patient-care/tobacco-control-and-prevention/youth-tobacco-cessation/" target="_blank" rel="noopener" class="link">Open</a>
+    </div>
+    <div class="res-card">
+      <h3>Smokefree.gov</h3>
+      <p class="tag">Self-help</p>
+      <p>SmokefreeTXT for teens, quit-plan generator.</p>
+      <a href="https://teen.smokefree.gov" target="_blank" rel="noopener" class="link">Open</a>
+    </div>
+    <div class="res-card">
+      <h3>This Is Quitting (Truth)</h3>
+      <p class="tag">Youth · Text</p>
+      <p>Text-based program built specifically for vape cessation.</p>
+      <a href="https://truthinitiative.org/thisisquitting" target="_blank" rel="noopener" class="link">Open</a>
+    </div>
+    <div class="res-card">
+      <h3>ND Local Public Health Units</h3>
+      <p class="tag">In-person</p>
+      <p>County-level cessation programs and referrals.</p>
+      <a href="pages/counselor-directory.html" class="link">Open</a>
+    </div>
+    <div class="res-card">
+      <h3>USPHS 5 A's / AAR Model</h3>
+      <p class="tag">Framework</p>
+      <p>Ask, Advise, Assess, Assist, Arrange — clinical workflow.</p>
+      <a href="pages/screening-script.html" class="link">Open</a>
+    </div>
+    <div class="res-card">
+      <h3>Not On Tobacco (N-O-T)</h3>
+      <p class="tag">Youth · Group</p>
+      <p>10-session group program from American Lung Association.</p>
+      <a href="https://www.lung.org/quit-smoking/helping-teens-quit/not-on-tobacco" target="_blank" rel="noopener" class="link">Open</a>
+    </div>
+  </div>
+
+  <div class="card">
+    <h3>Emerging Products Watch <span class="pill">Auto-updated</span></h3>
+    <p class="muted">Maintained quarterly. Last reviewed: <strong>May 2026</strong>.</p>
+    <ul>
+      <li>Nicotine pouches (Zyn, On!, Velo) — translation table to mg/day for NRT matching.</li>
+      <li>Disposable high-strength vapes (Elf Bar, Lost Mary) — pod-mg ↔ patch-strength chart.</li>
+      <li>Synthetic nicotine products — FDA status updates.</li>
+    </ul>
+  </div>
+</section>
+
+<!-- ============== CME ============== -->
+<section id="cme" class="panel">
+  <div class="card">
+    <h2>Free CME Module — Youth Tobacco &amp; Nicotine Cessation</h2>
+    <p class="muted">AMA PRA Category 1™ · ACGME · ANCC / AANP / AAPA accepted</p>
+
+    <div class="cme-grid">
+      <a class="cme-mod" href="pages/cme-1.html">
+        <div class="cme-badge">0.25 CME</div>
+        <h3>1. The Landscape</h3>
+        <p>ND youth prevalence, products, why most youth want to quit.</p>
+        <span class="primary">Start</span>
+      </a>
+      <a class="cme-mod" href="pages/cme-2.html">
+        <div class="cme-badge">0.5 CME</div>
+        <h3>2. Screening &amp; Brief Intervention</h3>
+        <p>5 A's, AAR, motivational interviewing scripts.</p>
+        <span class="primary">Start</span>
+      </a>
+      <a class="cme-mod" href="pages/cme-3.html">
+        <div class="cme-badge">0.5 CME</div>
+        <h3>3. Off-Label NRT for Youth</h3>
+        <p>AAP evidence base, dosing, safety, parental consent.</p>
+        <span class="primary">Start</span>
+      </a>
+      <a class="cme-mod" href="pages/cme-4.html">
+        <div class="cme-badge">0.25 CME</div>
+        <h3>4. Vape &amp; Pouch Dosing</h3>
+        <p>Translating modern product use into NRT equivalents.</p>
+        <span class="primary">Start</span>
+      </a>
+      <a class="cme-mod" href="pages/cme-5.html">
+        <div class="cme-badge">0.25 CME</div>
+        <h3>5. Referral &amp; Follow-up</h3>
+        <p>Using ND Quits as a one-stop triage; closing the loop.</p>
+        <span class="primary">Start</span>
+      </a>
+      <a class="cme-mod special" href="pages/cme-6.html">
+        <div class="cme-badge">+0.25</div>
+        <h3>Algorithm Walkthrough</h3>
+        <p>Earn credit by clicking through the algorithm (UpToDate-style).</p>
+        <span class="primary">Launch</span>
+      </a>
+    </div>
+
+    <div class="cme-total">
+      <strong>Total available:</strong> 2.0 AMA PRA Category 1 Credits™ · Estimated time: 90 min · 100% free
+    </div>
+  </div>
+</section>
+
+<!-- ============== STANDING ORDERS ============== -->
+<section id="standing" class="panel">
+  <div class="card">
+    <h2>Printable Standing Order</h2>
+    <p class="muted">Pre-filled template. Check applicable boxes, sign, and route to dispensing pharmacy.</p>
+
+    <div class="order">
+      <div class="order-header">
+        <div>
+          <h3>Youth Tobacco / Nicotine Cessation — Standing Order</h3>
+          <p class="muted">North Dakota Department of Health &amp; Human Services · Draft v1.0</p>
+        </div>
+        <div class="order-meta">
+          <div>Patient: ______________________</div>
+          <div>DOB: ___ / ___ / ______ &nbsp; Age: ____</div>
+          <div>MRN: ______________________</div>
+          <div>Date: ___ / ___ / ______</div>
+        </div>
+      </div>
+
+      <h4>Indications</h4>
+      <label><input type="checkbox"/> Daily tobacco / nicotine / vape / pouch use</label>
+      <label><input type="checkbox"/> Moderate-to-severe nicotine dependence (≥ ½ pod/day or equivalent)</label>
+      <label><input type="checkbox"/> Patient motivated to quit (readiness ≥ 7/10)</label>
+      <label><input type="checkbox"/> Parental consent obtained (if &lt; 18) — name: ______________________</label>
+
+      <h4>Pharmacotherapy</h4>
+      <label><input type="checkbox"/> Nicotine patch — strength: <select><option>7 mg</option><option>14 mg</option><option>21 mg</option></select> daily × 6–12 weeks</label>
+      <label><input type="checkbox"/> Nicotine gum — <select><option>2 mg</option><option>4 mg</option></select> q1–2h prn</label>
+      <label><input type="checkbox"/> Nicotine lozenge — <select><option>2 mg</option><option>4 mg</option></select> q1–2h prn</label>
+      <label><input type="checkbox"/> Bupropion SR 150 mg (≥ 18 only)</label>
+      <label><input type="checkbox"/> Varenicline (≥ 18 only)</label>
+
+      <h4>Referrals</h4>
+      <label><input type="checkbox"/> ND Quits 1-800-QUIT-NOW</label>
+      <label><input type="checkbox"/> My Life, My Quit (youth)</label>
+      <label><input type="checkbox"/> Local public health unit cessation program</label>
+      <label><input type="checkbox"/> Behavioral health counselor (cessation)</label>
+
+      <h4>Follow-up</h4>
+      <label><input type="checkbox"/> 2-week follow-up</label>
+      <label><input type="checkbox"/> 4-week follow-up</label>
+      <label><input type="checkbox"/> 12-week follow-up</label>
+
+      <div class="signature">
+        <div>
+          <div class="sig-line"></div>
+          <small>Prescriber signature</small>
+        </div>
+        <div>
+          <div class="sig-line"></div>
+          <small>Date</small>
+        </div>
+      </div>
+    </div>
+
+    <div class="print-row">
+      <button class="primary" onclick="window.print()">Print Standing Order</button>
+      <button class="ghost">Download Editable PDF</button>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<footer>
+  <p>Built from Advisory Council meeting · 05/19/2026 · v1.1 prototype</p>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
