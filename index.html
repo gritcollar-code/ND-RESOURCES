@@ -23,7 +23,6 @@
     <button class="tab" data-tab="standing">Standing Orders</button>
   </nav>
 
-  <!-- Keyword search -->
   <div class="search-wrap">
     <input id="searchBox" type="search" placeholder="🔍 Search the dashboard — e.g. ‘NRT dose’, ‘12 year old’, ‘vape’…" autocomplete="off" />
     <div id="searchResults" class="search-results"></div>
@@ -35,14 +34,13 @@
 <!-- ============== OVERVIEW ============== -->
 <section id="overview" class="panel active">
 
-  <!-- BIG, prominent Start Here -->
   <div class="start-here">
     <div class="start-here-tag">▼ START HERE ▼</div>
     <h2>Call NDQuits</h2>
     <p class="phone">1-800-QUIT-NOW</p>
     <p>One umbrella line. Routes patients automatically to the right youth or adult program — MyLifeMyQuit, local public-health units, counselor referral, or NRT support. Most clinical questions start and end here.</p>
     <div class="start-here-actions">
-      <a class="primary-link" href="https://www.ndhealth.gov/ndquits" target="_blank" rel="noopener">Visit NDQuits →</a>
+      <a class="primary-link" href="https://nd.quitlogix.org/" target="_blank" rel="noopener">Visit NDQuits portal →</a>
       <a class="ghost-link" href="#algorithm" data-jump="algorithm">Open Treatment Algorithm</a>
     </div>
   </div>
@@ -58,10 +56,10 @@
       <ul class="checklist">
         <li><strong>One umbrella resource</strong> — single entry point (NDQuits) that routes to all paths.</li>
         <li><strong>Click-through algorithm</strong> with hyperlinks for dosing, off-label evidence, referrals, and parental consent.</li>
+        <li><strong>Interactive flowchart</strong> with a "Try a Sample Patient" sandbox.</li>
         <li><strong>Printable pathways &amp; standing orders</strong> embedded in workflow.</li>
         <li><strong>Short, Category-1 CME</strong> (AMA / ACGME accredited) — 3–5 minute modules.</li>
         <li><strong>Penn State Dependence Index</strong> for simplified NRT dosing (Mayo Clinic approach).</li>
-        <li><strong>Emerging product</strong> info — reviewed every 3–6 months.</li>
         <li><strong>Cessation counselor directory</strong> with minimum patient ages listed.</li>
         <li><strong>Mobile-friendly forward flow</strong> — positive-screen branches link directly to next step.</li>
       </ul>
@@ -88,12 +86,120 @@
     </div>
   </div>
 
-  <p class="updated">Last updated: June 10, 2026 · v1.3</p>
+  <p class="updated">Last updated: June 10, 2026 · v1.4</p>
 </section>
 
 <!-- ============== ALGORITHM ============== -->
 <section id="algorithm" class="panel">
-  <div class="card">
+
+  <!-- View toggle -->
+  <div class="view-toggle">
+    <button class="vt active" data-view="list">📋 Step list</button>
+    <button class="vt" data-view="chart">🌳 Flowchart</button>
+    <button class="vt" data-view="sample">🧪 Try a sample patient</button>
+    <a class="vt link-style" href="pages/screening-pathway-print.html" target="_blank">🖨 Printable version ↗</a>
+  </div>
+
+  <!-- ===== Sample Patient Sandbox ===== -->
+  <div class="card view-pane" id="view-sample" hidden>
+    <h2>Try a Sample Patient 🧪</h2>
+    <p class="muted">Walk through the algorithm with one of three pre-made patients. <strong>No real calls or referrals are made</strong> — this is a safe sandbox for teaching or self-practice.</p>
+
+    <div class="sample-picker" id="samplePicker">
+      <button class="sample-card" data-case="case1">
+        <div class="sample-age">12 yo</div>
+        <h3>Maya</h3>
+        <p>Daily Elf Bar vaping (~½ bar/day). Lives with grandparents who also use nicotine. Wants to quit (8/10). Penn State Index: 5.</p>
+      </button>
+      <button class="sample-card" data-case="case2">
+        <div class="sample-age">16 yo</div>
+        <h3>Jordan</h3>
+        <p>5 Zyn 6 mg pouches/day. First use within 10 min of waking. Readiness 7/10. Penn State Index: 6. Parent reachable today.</p>
+      </button>
+      <button class="sample-card" data-case="case3">
+        <div class="sample-age">20 yo</div>
+        <h3>Alex</h3>
+        <p>1 pack/day cigarettes + 1 JUUL pod/day. Readiness 9/10. Penn State Index: 8. Adult — full Rx options.</p>
+      </button>
+    </div>
+
+    <div id="sampleFlow" class="sample-flow" hidden></div>
+  </div>
+
+  <!-- ===== Flowchart View ===== -->
+  <div class="card view-pane" id="view-chart" hidden>
+    <h2>Interactive Flowchart 🌳</h2>
+    <p class="muted">Click any box for details. Use the printable version (above) for a clean paper copy.</p>
+
+    <div class="flowchart">
+
+      <button class="node start" data-info="screen">
+        <span class="node-tag">STEP 1</span>
+        <strong>Screen every visit (≥ 10 yo)</strong>
+        <small>"Smoking, vaping, pouches, or chew?"</small>
+      </button>
+
+      <div class="connector"></div>
+
+      <div class="branch-row two">
+        <button class="node pos" data-info="positive">
+          <span class="node-tag">POSITIVE</span>
+          <strong>Assess product + readiness</strong>
+          <small>Score Penn State Index</small>
+        </button>
+        <button class="node neg" data-info="negative">
+          <span class="node-tag">NEGATIVE</span>
+          <strong>Prevent &amp; re-screen</strong>
+          <small>Brief counsel · document</small>
+        </button>
+      </div>
+
+      <div class="connector"></div>
+
+      <button class="node" data-info="age">
+        <span class="node-tag">STEP 3</span>
+        <strong>Age &amp; consent pathway</strong>
+        <small>&lt; 14 · 14–17 · 18–21</small>
+      </button>
+
+      <div class="connector"></div>
+
+      <div class="branch-row three">
+        <button class="node small" data-info="age-under14">
+          <strong>&lt; 14</strong>
+          <small>Counseling + family</small>
+        </button>
+        <button class="node small" data-info="age-14-17">
+          <strong>14 – 17</strong>
+          <small>Off-label NRT + consent</small>
+        </button>
+        <button class="node small" data-info="age-18-21">
+          <strong>18 – 21</strong>
+          <small>Full Rx options</small>
+        </button>
+      </div>
+
+      <div class="connector"></div>
+
+      <button class="node" data-info="treat">
+        <span class="node-tag">STEP 4</span>
+        <strong>Treat — choose intervention</strong>
+        <small>Pharm · counseling · digital</small>
+      </button>
+
+      <div class="connector"></div>
+
+      <button class="node finish" data-info="refer">
+        <span class="node-tag">STEP 5</span>
+        <strong>Refer NDQuits + follow up</strong>
+        <small>1-800-QUIT-NOW · re-check 2–4 wk</small>
+      </button>
+
+    </div>
+  </div>
+
+  <!-- ===== List view (default) ===== -->
+  <div class="card view-pane active" id="view-list">
     <h2>Click-Through Treatment Algorithm</h2>
     <p class="muted">Printable at any step. Designed for mobile — each positive-screen step links forward to the next without going back to the menu.</p>
 
@@ -223,6 +329,15 @@
     </div>
     <p class="updated">Last updated: June 10, 2026</p>
   </div>
+
+  <!-- Modal for flowchart node info -->
+  <div class="modal-overlay" id="modalOverlay" hidden>
+    <div class="modal">
+      <button class="modal-close" id="modalClose">×</button>
+      <div id="modalBody"></div>
+    </div>
+  </div>
+
 </section>
 
 <!-- ============== RESOURCES ============== -->
@@ -234,7 +349,7 @@
     <p class="phone">1-800-QUIT-NOW</p>
     <p>NDQuits is the umbrella entry point. It routes patients to MyLifeMyQuit, National Jewish coaches, or local public health units based on age and product. <strong>One call covers it all.</strong></p>
     <div class="start-here-actions">
-      <a href="https://www.ndhealth.gov/ndquits" target="_blank" rel="noopener" class="primary-link">Visit NDQuits →</a>
+      <a href="https://nd.quitlogix.org/" target="_blank" rel="noopener" class="primary-link">Visit NDQuits portal →</a>
     </div>
   </div>
 
@@ -377,7 +492,6 @@
       <strong>Total available:</strong> 2.5 AMA PRA Category 1 Credits™ · Each module 3–5 minutes · 100% free
     </div>
 
-    <!-- Suggest a Topic -->
     <div class="suggest-box">
       <h3>💡 Suggest a Topic</h3>
       <p class="muted">Want a module on something we don't cover? Tell us — once a topic gets enough votes, we'll build it.</p>
@@ -404,7 +518,7 @@
       <div class="order-header">
         <div>
           <h3>Youth Tobacco / Nicotine Cessation — Standing Order</h3>
-          <p class="muted">North Dakota Department of Health &amp; Human Services · NDQuits Youth Treatment Initiative · Draft v1.3</p>
+          <p class="muted">North Dakota Department of Health &amp; Human Services · NDQuits Youth Treatment Initiative · Draft v1.4</p>
         </div>
         <div class="order-meta">
           <div>Patient: ______________________</div>
