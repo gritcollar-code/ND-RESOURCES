@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<title>Print Referral Form — ND Cessation Dashboard</title>
+<title>Print Referral Form — NDQuits Dashboard</title>
 <link rel="stylesheet" href="../styles.css" />
 <link rel="stylesheet" href="_shared.css" />
 </head>
@@ -13,7 +13,7 @@
     <div class="logo">ND</div>
     <div>
       <h1>North Dakota Youth Tobacco &amp; Nicotine Cessation</h1>
-      <p class="sub">Clinician One-Stop Shop · Advisory Council Aligned Dashboard</p>
+      <p class="sub">Clinician One-Stop Shop · NDQuits Youth Treatment Initiative</p>
     </div>
   </div>
   <nav class="tabs">
@@ -23,7 +23,7 @@
 <main>
   <div class="crumb"><a href="../index.html">Dashboard</a> · Treatment Algorithm · Step 5</div>
   <h1 class="page-title">Print Referral Form</h1>
-  <p class="lede">Standard one-page referral to ND Quits. Fax to 1-800-483-3114 or eFax through your EHR.</p>
+  <p class="lede">Standard one-page referral to NDQuits. Fax to 1-800-483-3114 or eFax through your EHR.</p>
   <div class="card">
     
 <table>
@@ -34,6 +34,7 @@
 <tr><td>Phone</td><td>______________________</td></tr>
 <tr><td>Best time to reach</td><td>______________________</td></tr>
 <tr><td>Product(s) used</td><td>☐ Cigarette &nbsp; ☐ Vape &nbsp; ☐ Pouch &nbsp; ☐ Chew</td></tr>
+<tr><td>Penn State Index score</td><td>____ / 9</td></tr>
 <tr><td>Readiness (0–10)</td><td>______</td></tr>
 <tr><td>Parent/guardian consent (if &lt; 18)</td><td>______________________</td></tr>
 <tr><td>Referring clinician</td><td>______________________</td></tr>
@@ -41,11 +42,14 @@
 <tr><td>Date</td><td>___ / ___ / ______</td></tr>
 </tbody>
 </table>
-<div style="margin-top:18px;"><button class="primary" onclick="window.print()">Print this form</button></div>
 
   </div>
-  <a href="../index.html" class="back-btn">← Back to Dashboard</a>
+  <div class="print-row">
+    <button class="primary" onclick="window.print()">🖨 Print this page</button>
+    <a class="ghost" href="../index.html">◀ Back to Dashboard</a>
+  </div>
+  <p class="updated">Last updated: June 10, 2026 · Verify currency before printing for clinical use.</p>
 </main>
-<footer><p>Built from Advisory Council meeting · 05/19/2026 · v1.2</p></footer>
+<footer><p>NDQuits Youth Treatment Initiative · CEASE Grant · Last updated June 10, 2026</p></footer>
 </body>
 </html>

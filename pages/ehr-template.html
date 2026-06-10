@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<title>EHR Template / Dot Phrase — ND Cessation Dashboard</title>
+<title>EHR Template / Dot Phrase — NDQuits Dashboard</title>
 <link rel="stylesheet" href="../styles.css" />
 <link rel="stylesheet" href="_shared.css" />
 </head>
@@ -13,7 +13,7 @@
     <div class="logo">ND</div>
     <div>
       <h1>North Dakota Youth Tobacco &amp; Nicotine Cessation</h1>
-      <p class="sub">Clinician One-Stop Shop · Advisory Council Aligned Dashboard</p>
+      <p class="sub">Clinician One-Stop Shop · NDQuits Youth Treatment Initiative</p>
     </div>
   </div>
   <nav class="tabs">
@@ -33,12 +33,13 @@ Status: *** (never / former / current)<br/>
 Product(s): *** (cigarettes / vape / pouch / chew / cigar)<br/>
 Frequency: *** per day<br/>
 Time to first use: *** min after waking<br/>
+Penn State Dependence Index score: *** (/9)<br/>
 Readiness to quit (0–10): ***<br/>
 Co-use: *** (cannabis / alcohol / none)<br/>
 <br/>
 Advice given: *** (brief / extended)<br/>
 Plan: *** (NRT / counseling / referral / re-screen)<br/>
-Referral: *** (ND Quits / MyLifeMyQuit / counselor)<br/>
+Referral: *** (NDQuits / MyLifeMyQuit / counselor)<br/>
 Follow-up: *** weeks
 </div>
 
@@ -53,11 +54,15 @@ Follow-up: *** weeks
 </tbody>
 </table>
 
-<div class="callout"><strong>Tip:</strong> Ask your EHR team to add a dropdown for "vape" and "pouch" — current SNOMED defaults often miss these.</div>
+<div class="callout"><strong>Tip:</strong> Ask your EHR team to add a dropdown for "vape" and "pouch" — current SNOMED defaults often miss these. See the <a href="cme-ehr-integration.html">EHR Integration CME module</a> for templated workflows.</div>
 
   </div>
-  <a href="../index.html" class="back-btn">← Back to Dashboard</a>
+  <div class="print-row">
+    <button class="primary" onclick="window.print()">🖨 Print this page</button>
+    <a class="ghost" href="../index.html">◀ Back to Dashboard</a>
+  </div>
+  <p class="updated">Last updated: June 10, 2026 · Verify currency before printing for clinical use.</p>
 </main>
-<footer><p>Built from Advisory Council meeting · 05/19/2026 · v1.2</p></footer>
+<footer><p>NDQuits Youth Treatment Initiative · CEASE Grant · Last updated June 10, 2026</p></footer>
 </body>
 </html>
