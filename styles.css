@@ -532,13 +532,20 @@ main { padding: 36px; max-width: 1200px; margin: 0 auto; }
   color: var(--green-900);
   border-color: var(--gold-light);
 }
-/* When forward link appears inside an age-card or treatment card,
-   move it to its own line so it doesn't crowd the resource link. */
-.age-card .link.forward,
-.tx .link.forward {
-  display: block;
-  margin-top: 10px;
-  text-align: center;
+/* The 'Continue to treatment' / 'Continue' button: own line at the bottom,
+   visually separated from the resource link above with a top dashed border. */
+.age-card > .link.forward,
+.tx > .link.forward {
+  margin-top: auto;       /* pushes the button to the bottom of the card */
+  padding-top: 12px;
+  border-top: 1px dashed var(--line);
+  padding: 12px 12px 8px 12px;
+  background: var(--gold);
+  border-radius: 0 0 6px 6px;
+}
+.age-card > .link.forward {
+  /* extra breathing room above the divider */
+  margin-top: 14px;
 }
 
 .links { margin-top: 10px; display: flex; flex-wrap: wrap; gap: 8px; }
@@ -563,12 +570,21 @@ main { padding: 36px; max-width: 1200px; margin: 0 auto; }
 .age-card, .tx {
   background: white; border-radius: 8px; padding: 16px;
   border: 1px solid var(--line);
+  display: flex; flex-direction: column;
 }
 .age-card h4, .tx h4 {
   font-size: 14px; color: var(--green-700);
   margin-bottom: 6px; font-weight: 600;
 }
 .age-card p, .tx p { font-size: 13px; color: var(--ink); margin-bottom: 8px; }
+/* Stack each link on its own line inside age/treatment cards */
+.age-card > .link,
+.tx > .link {
+  display: block;
+  margin-top: 8px;
+  text-align: center;
+  align-self: stretch;
+}
 
 /* ---------- Buttons ---------- */
 .print-row { display: flex; gap: 10px; margin-top: 20px; }
