@@ -116,9 +116,29 @@ a:hover { text-decoration: underline; }
 }
 
 /* ---------- Main ---------- */
-main { padding: 36px; max-width: 1200px; margin: 0 auto; }
+main { padding: 36px; max-width: 1400px; margin: 0 auto; transition: max-width 0.2s ease; }
 .panel { display: none; animation: fade 0.25s ease; }
 .panel.active { display: block; }
+
+/* Treatment Algorithm = wide view.
+   When the algorithm tab is active, allow main to span almost the full window. */
+main:has(#algorithm.panel.active) {
+  max-width: min(1800px, calc(100vw - 24px));
+}
+/* Older browsers without :has() — use a JS fallback class on <body>. */
+body.wide-algo main { max-width: min(1800px, calc(100vw - 24px)); }
+
+#algorithm .age-grid,
+#algorithm .tx-grid {
+  grid-template-columns: repeat(3, 1fr);
+  gap: 18px;
+}
+@media (max-width: 1000px) {
+  #algorithm .age-grid,
+  #algorithm .tx-grid {
+    grid-template-columns: 1fr;
+  }
+}
 @keyframes fade { from { opacity: 0; transform: translateY(4px); } to { opacity: 1; transform: none; } }
 
 .card {

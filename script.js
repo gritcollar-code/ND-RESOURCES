@@ -11,6 +11,8 @@ const panels = document.querySelectorAll('.panel');
 function activate(tabName) {
   tabs.forEach(t => t.classList.toggle('active', t.dataset.tab === tabName));
   panels.forEach(p => p.classList.toggle('active', p.id === tabName));
+  // Widen layout for the Treatment Algorithm tab
+  document.body.classList.toggle('wide-algo', tabName === 'algorithm');
   window.scrollTo({ top: 0, behavior: 'smooth' });
 }
 
