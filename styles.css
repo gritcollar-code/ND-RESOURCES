@@ -532,6 +532,14 @@ main { padding: 36px; max-width: 1200px; margin: 0 auto; }
   color: var(--green-900);
   border-color: var(--gold-light);
 }
+/* When forward link appears inside an age-card or treatment card,
+   move it to its own line so it doesn't crowd the resource link. */
+.age-card .link.forward,
+.tx .link.forward {
+  display: block;
+  margin-top: 10px;
+  text-align: center;
+}
 
 .links { margin-top: 10px; display: flex; flex-wrap: wrap; gap: 8px; }
 .link {
