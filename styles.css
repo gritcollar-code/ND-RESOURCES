@@ -532,21 +532,6 @@ main { padding: 36px; max-width: 1200px; margin: 0 auto; }
   color: var(--green-900);
   border-color: var(--gold-light);
 }
-/* The 'Continue to treatment' / 'Continue' button: own line at the bottom,
-   visually separated from the resource link above with a top dashed border. */
-.age-card > .link.forward,
-.tx > .link.forward {
-  margin-top: auto;       /* pushes the button to the bottom of the card */
-  padding-top: 12px;
-  border-top: 1px dashed var(--line);
-  padding: 12px 12px 8px 12px;
-  background: var(--gold);
-  border-radius: 0 0 6px 6px;
-}
-.age-card > .link.forward {
-  /* extra breathing room above the divider */
-  margin-top: 14px;
-}
 
 .links { margin-top: 10px; display: flex; flex-wrap: wrap; gap: 8px; }
 .link {
@@ -570,20 +555,34 @@ main { padding: 36px; max-width: 1200px; margin: 0 auto; }
 .age-card, .tx {
   background: white; border-radius: 8px; padding: 16px;
   border: 1px solid var(--line);
-  display: flex; flex-direction: column;
+  display: flex !important;
+  flex-direction: column !important;
 }
 .age-card h4, .tx h4 {
   font-size: 14px; color: var(--green-700);
   margin-bottom: 6px; font-weight: 600;
 }
-.age-card p, .tx p { font-size: 13px; color: var(--ink); margin-bottom: 8px; }
-/* Stack each link on its own line inside age/treatment cards */
+.age-card p, .tx p { font-size: 13px; color: var(--ink); margin-bottom: 10px; }
+
+/* Stack every link on its own line inside age/treatment cards.
+   The "Continue" forward button sits at the bottom of the card. */
 .age-card > .link,
 .tx > .link {
-  display: block;
-  margin-top: 8px;
-  text-align: center;
-  align-self: stretch;
+  display: block !important;
+  width: 100% !important;
+  margin-top: 8px !important;
+  text-align: center !important;
+  box-sizing: border-box;
+}
+.age-card > .link.forward,
+.tx > .link.forward {
+  margin-top: auto !important;       /* push to bottom */
+  padding-top: 10px !important;
+  padding-bottom: 10px !important;
+}
+.age-card > .link:first-of-type,
+.tx > .link:first-of-type {
+  margin-top: 12px !important;
 }
 
 /* ---------- Buttons ---------- */
