@@ -276,6 +276,10 @@ const SEARCH_INDEX = [
   { title: 'Print Screening Pathway', tab: 'algorithm', href: 'pages/screening-pathway-print.html', desc: 'Printable algorithm + screening questions', keywords: 'print pathway algorithm screening questions paper printable' },
 
   { title: 'NDQuits (ages 18–21)', tab: 'resources', desc: '1-800-QUIT-NOW · feasible counseling option for 18–21', keywords: 'NDQuits quitline 1-800-QUIT-NOW 18 19 20 21' },
+  { title: 'ACT — Ask, Counsel, Treat (AAP)', tab: 'resources', href: 'https://www.aap.org/globalassets/tobacco/aap_youth_tobacco_cessation_considerations_for_clinicians.pdf', desc: 'AAP-recommended youth cessation approach', keywords: 'ACT ask counsel treat AAP screening tool youth cessation' },
+  { title: 'Screening tools', tab: 'resources', desc: 'ACT, 5 A\'s / AAR', keywords: 'screening tools ACT 5 A\'s AAR ask advise' },
+  { title: 'Assessing dependence', tab: 'resources', desc: 'Penn State Index, time to first use, Fagerström, short form', keywords: 'assess assessing dependence penn state fagerstrom time to first use two question short form' },
+  { title: 'NRT dosing', tab: 'resources', desc: 'Penn State dosing, vape/pouch translator, adult dosing table', keywords: 'NRT dosing patch gum lozenge translator penn state' },
   { title: 'AAP Youth Cessation Toolkit', tab: 'resources', desc: 'Primary clinical resource — off-label NRT, scripts, screening', keywords: 'AAP american academy pediatrics toolkit primary clinical guidance' },
   { title: 'My Life, My Quit (supportive, ages 13–17)', tab: 'resources', desc: 'Text "Start My Quit" to 36072 — supportive, not stand-alone', keywords: 'mylifemyquit my life my quit text teen youth 13 14 15 16 17 supportive' },
   { title: 'This Is Quitting (supportive, ages 13–24)', tab: 'resources', desc: 'Text DITCHVAPE to 88709', keywords: 'this is quitting vape truth ditchvape supportive' },

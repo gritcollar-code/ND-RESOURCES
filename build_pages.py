@@ -342,10 +342,10 @@ For patients &lt; 18, doses are off-label — start one strength lower and consu
 <div class="callout"><strong>Supportive, not stand-alone.</strong> My Life, My Quit offers motivation and education for youth working on nicotine addiction. Do not treat it as a stand-alone referral. NDQuits is a feasible option for ages 18–21; it is not the youth treatment resource for younger patients.</div>
 
 <h3>Provider list — in development</h3>
-<p>Local public health units are not direct youth treatment resources and will look to this initiative for guidance. Part of this project is to identify counseling providers clinicians can use as a resource; this list will be added here.</p>
+<p>A list of counseling providers clinicians can use as a resource will be added here.</p>
 
 <details>
-<summary>Public health unit contacts (reference only — not youth treatment resources)</summary>
+<summary>Public health unit contacts (reference)</summary>
 <table>
 <thead><tr><th>Unit</th><th>Region</th><th>Contact</th></tr></thead>
 <tbody>
