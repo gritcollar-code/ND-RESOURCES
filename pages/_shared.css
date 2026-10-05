@@ -51,3 +51,5 @@
   font-size: 13px; font-weight: 500;
 }
 .back-btn:hover { background: var(--green-900); text-decoration: none; color: var(--cream); }
+.subpage details { margin: 12px 0; }
+.subpage summary { cursor: pointer; font-weight: 600; color: var(--green-700); font-size: 14px; }

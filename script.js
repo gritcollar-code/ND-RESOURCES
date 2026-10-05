@@ -84,7 +84,7 @@ const NODE_INFO = {
       <ul>
         <li><strong>&lt; 14:</strong> Counseling and family-based intervention. Pharmacotherapy requires parental consent.</li>
         <li><strong>14–17:</strong> Behavioral first; off-label NRT per AAP if dependent and motivated. Parental consent generally required.</li>
-        <li><strong>18–21:</strong> Full NRT, varenicline, bupropion. No parental consent needed.</li>
+        <li><strong>18–21:</strong> Full NRT, varenicline, bupropion. No parental consent needed. NDQuits is a feasible counseling option.</li>
       </ul>`,
     links: []
   },
@@ -105,7 +105,8 @@ const NODE_INFO = {
   },
   'age-18-21': {
     title: '18 – 21 — Full adult Rx options',
-    body: `<p>FDA-approved NRT, bupropion, and varenicline all eligible. Combination NRT (patch + short-acting) is the most effective regimen.</p>`,
+    body: `<p>FDA-approved NRT, bupropion, and varenicline all eligible. Combination NRT (patch + short-acting) is the most effective regimen.</p>
+      <p>NDQuits (1-800-QUIT-NOW) is a feasible counseling option for this age group.</p>`,
     links: [
       ['Adult Rx quick-reference', 'pages/adult-rx.html'],
       ['Adult NRT dosing table', 'pages/dosing-table.html']
@@ -116,21 +117,22 @@ const NODE_INFO = {
     body: `<p>Three parallel intervention paths — pick one or combine.</p>
       <ul>
         <li><strong>Pharmacotherapy:</strong> dose by Penn State Index, or by product translator.</li>
-        <li><strong>Counseling:</strong> local public-health unit or NDQuits coach.</li>
-        <li><strong>Digital / text:</strong> MyLifeMyQuit, This Is Quitting.</li>
+        <li><strong>One-on-one counseling:</strong> provide it in your practice, or refer. NDQuits is an option for ages 18–21.</li>
+        <li><strong>Supportive resources:</strong> My Life, My Quit, This Is Quitting — they support treatment and are not a stand-alone referral.</li>
       </ul>`,
     links: [
+      ['Medication / Pharmacotherapy', '#pharmacotherapy'],
       ['Adult NRT dosing table', 'pages/dosing-table.html'],
-      ['Counselor directory', 'pages/counselor-directory.html'],
-      ['Enroll patient (text support)', 'pages/enroll-patient.html']
+      ['Counseling options & directory', 'pages/counselor-directory.html'],
+      ['Supportive text programs', 'pages/enroll-patient.html']
     ]
   },
   refer: {
-    title: 'Step 5 · Refer NDQuits + follow up',
-    body: `<p>One call covers all youth and adult referrals: <strong>NDQuits 1-800-QUIT-NOW</strong>.</p>
+    title: 'Step 5 · Refer for counseling + follow up',
+    body: `<p>If counseling is not delivered in your practice, refer to one-on-one counseling. For patients ages 18–21, <strong>NDQuits 1-800-QUIT-NOW</strong> is a feasible option.</p>
       <p>Schedule a follow-up at 2–4 weeks. Document the plan in the EHR.</p>`,
     links: [
-      ['Print referral form', 'pages/referral-form.html'],
+      ['Print NDQuits referral form (18–21)', 'pages/referral-form.html'],
       ['Print standing order', '#standing']
     ]
   }
@@ -147,6 +149,14 @@ function openModal(key) {
     ? `<div class="actions">${data.links.map(([t, u]) => `<a class="link" href="${u}">${t}</a>`).join('')}</div>`
     : '';
   modalBody.innerHTML = `<h3>${data.title}</h3>${data.body}${linksHtml}`;
+  // In-page links (e.g. #standing, #pharmacotherapy) switch tabs instead of just changing the URL hash
+  modalBody.querySelectorAll('a[href^="#"]').forEach(a => {
+    a.addEventListener('click', (e) => {
+      e.preventDefault();
+      closeModal();
+      activate(a.getAttribute('href').slice(1));
+    });
+  });
   modalOverlay.removeAttribute('hidden');
 }
 function closeModal() {
@@ -173,8 +183,8 @@ const SAMPLE_CASES = {
       { t: 'Step 1 — Screen', d: 'Maya self-discloses Elf Bar use. Note time-to-first-use and product strength.', w: '✅ Positive screen. She volunteered the information — good rapport.' },
       { t: 'Step 2A — Assess', d: 'Penn State Index = 5 (moderate-high). Readiness 8/10. Co-use: none reported. Household exposure: yes.', w: '🎯 Moderate-to-severe dependence + high motivation = strong cessation candidate.' },
       { t: 'Step 3 — Age pathway: UNDER 14', d: 'Counseling-first pathway. Pharmacotherapy requires parental consent. Maya wants help but no guardian is at the visit.', w: '⚠ Cannot start NRT today. Document parental consent attempt, schedule follow-up call.' },
-      { t: 'Step 4 — Treat', d: 'Enroll in <strong>MyLifeMyQuit</strong> (texting program for 13–17, but accepts referrals from clinicians at her age). Offer NDQuits family enrollment for the grandparents.', w: '📱 Hand Maya a printed card with the short code: "Start My Quit" to 36072.' },
-      { t: 'Step 5 — Refer + follow up', d: 'Call NDQuits 1-800-QUIT-NOW for the household. Schedule re-check in 2 weeks to reassess and obtain parental consent for NRT if dependence persists.', w: '✅ In this sandbox, no real calls are made.' }
+      { t: 'Step 4 — Treat', d: 'Counseling first: provide one-on-one counseling in clinic, or refer Maya to a one-on-one counselor. Add <strong>My Life, My Quit</strong> as a <em>supportive</em> resource for motivation and education. Offer NDQuits to the grandparents who use nicotine.', w: '📱 My Life, My Quit supports the plan — it is not a stand-alone referral for Maya.' },
+      { t: 'Step 5 — Refer + follow up', d: 'Confirm the counseling referral. Schedule re-check in 2 weeks to reassess and obtain parental consent for NRT if dependence persists.', w: '✅ In this sandbox, no real calls are made.' }
     ],
     finalCallout: 'Maya is a great example of why the under-14 pathway leans on counseling first — and why involving the family changes outcomes.'
   },
@@ -186,7 +196,7 @@ const SAMPLE_CASES = {
       { t: 'Step 2A — Assess', d: 'Penn State Index = 6 (high dependence). Time-to-first-use < 30 min = strong dependence marker. Readiness 7/10.', w: '🎯 Meets AAP off-label NRT criteria.' },
       { t: 'Step 3 — Age pathway: 14–17', d: 'Off-label NRT per AAP is appropriate. Parental consent required in ND.', w: '📞 Parent reachable today — obtain verbal + written consent and document.' },
       { t: 'Step 4 — Treat', d: 'Start nicotine patch <strong>14 mg/day</strong> + lozenge 2 mg prn (Penn State Index 6 → moderate-high regimen, one step down for &lt; 18). Schedule MI counseling.', w: '💊 Off-label use — document shared decision-making in chart.' },
-      { t: 'Step 5 — Refer + follow up', d: 'Refer NDQuits for coaching backup. Schedule 2-week and 4-week follow-up. Print the standing order.', w: '🖨 In this sandbox, no real call is placed.' }
+      { t: 'Step 5 — Refer + follow up', d: 'Provide or refer to one-on-one counseling; My Life, My Quit can be added as a supportive resource. Schedule 2-week and 4-week follow-up. Print the standing order.', w: '🖨 In this sandbox, no real referral is placed.' }
     ],
     finalCallout: 'Jordan illustrates the 14–17 pathway: off-label NRT + parental consent + behavioral support, all in one visit.'
   },
@@ -198,7 +208,7 @@ const SAMPLE_CASES = {
       { t: 'Step 2A — Assess', d: 'Penn State Index = 8 (very high). Readiness 9/10. Excellent candidate for aggressive cessation Rx.', w: '🎯 Strong case for combination NRT or varenicline.' },
       { t: 'Step 3 — Age pathway: 18–21', d: 'Adult, no parental consent needed. All FDA-approved Rx available.', w: '✅ Full adult options.' },
       { t: 'Step 4 — Treat', d: 'Start <strong>varenicline</strong> (highest single-agent quit rate) OR combination NRT: patch 21 mg + lozenge 4 mg prn. Counsel on neuropsych monitoring if varenicline.', w: '💊 Discuss preference and side-effect profile.' },
-      { t: 'Step 5 — Refer + follow up', d: 'Refer NDQuits coaching. Schedule 1-, 4-, and 12-week follow-up. Print the standing order.', w: '🖨 In this sandbox, no real call is placed.' }
+      { t: 'Step 5 — Refer + follow up', d: 'NDQuits coaching is a feasible option at age 20 — or provide / refer to one-on-one counseling. Schedule 1-, 4-, and 12-week follow-up. Print the standing order.', w: '🖨 In this sandbox, no real call is placed.' }
     ],
     finalCallout: 'Alex shows the adult pathway: full Rx options, highest-efficacy agents, and intensive follow-up.'
   }
@@ -247,7 +257,7 @@ const SEARCH_INDEX = [
   { title: 'Positive screen — Assess', tab: 'algorithm', desc: 'Step 2A — product type, frequency, readiness', keywords: 'positive screen assess motivational interview readiness frequency' },
   { title: 'Pathway by age & consent', tab: 'algorithm', desc: 'Step 3 — under 14, 14–17, 18–21', keywords: 'age consent under 14 12 year old 18 21 parental' },
   { title: 'Treat — choose intervention', tab: 'algorithm', desc: 'Step 4 — pharmacotherapy, counseling, digital support', keywords: 'treat treatment NRT patch gum lozenge counseling text' },
-  { title: 'Refer & follow up', tab: 'algorithm', desc: 'Step 5 — NDQuits and 2–4 week follow-up', keywords: 'refer follow up NDQuits quitline' },
+  { title: 'Refer & follow up', tab: 'algorithm', desc: 'Step 5 — counseling referral, NDQuits (18–21), 2–4 week follow-up', keywords: 'refer follow up counseling NDQuits quitline' },
   { title: 'Try a Sample Patient 🧪', tab: 'algorithm', desc: 'Walk through cases without real calls', keywords: 'sample test fake patient sandbox tutorial example walkthrough' },
   { title: 'Interactive Flowchart 🌳', tab: 'algorithm', desc: 'Visual flowchart — click nodes for details', keywords: 'flowchart flow chart diagram visual' },
 
@@ -260,15 +270,18 @@ const SEARCH_INDEX = [
   { title: 'AAP Off-Label NRT Evidence (14–17)', tab: 'algorithm', href: 'pages/aap-nrt-evidence.html', desc: 'Criteria, safety, parental consent', keywords: 'off-label NRT teen adolescent AAP 14 15 16 17' },
   { title: 'Adult Rx Quick-Reference (18–21)', tab: 'algorithm', href: 'pages/adult-rx.html', desc: 'Patch, gum, lozenge, bupropion, varenicline', keywords: 'adult Rx 18 21 bupropion varenicline' },
   { title: 'Adult NRT Dosing Table', tab: 'algorithm', href: 'pages/dosing-table.html', desc: 'Starting strengths & taper schedule (adult)', keywords: 'adult dosing table NRT patch taper' },
-  { title: 'ND Counselor Directory', tab: 'algorithm', href: 'pages/counselor-directory.html', desc: 'Phone numbers & regions', keywords: 'counselor directory public health Fargo Bismarck Grand Forks Minot' },
-  { title: 'Enroll in Digital / Text Support', tab: 'algorithm', href: 'pages/enroll-patient.html', desc: 'MyLifeMyQuit, This Is Quitting short codes', keywords: 'enroll digital text MyLifeMyQuit This Is Quitting smokefree' },
+  { title: 'Counseling Options & Directory', tab: 'algorithm', href: 'pages/counselor-directory.html', desc: 'One-on-one counseling options; provider list in development', keywords: 'counselor counseling directory one-on-one referral public health' },
+  { title: 'Supportive Text Programs', tab: 'algorithm', href: 'pages/enroll-patient.html', desc: 'My Life, My Quit, This Is Quitting — supportive, not stand-alone', keywords: 'enroll digital text MyLifeMyQuit My Life My Quit This Is Quitting smokefree supportive' },
   { title: 'Print Referral Form', tab: 'algorithm', href: 'pages/referral-form.html', desc: 'One-page fax referral to NDQuits', keywords: 'referral form fax NDQuits' },
   { title: 'Print Screening Pathway', tab: 'algorithm', href: 'pages/screening-pathway-print.html', desc: 'Printable algorithm + screening questions', keywords: 'print pathway algorithm screening questions paper printable' },
 
-  { title: 'NDQuits — One-Stop Shop', tab: 'resources', desc: '1-800-QUIT-NOW · routes patients automatically', keywords: 'NDQuits one stop shop quitline 1-800-QUIT-NOW' },
-  { title: 'MyLifeMyQuit (ages 13–17)', tab: 'resources', desc: 'Text "Start My Quit" to 36072', keywords: 'mylifemyquit text teen youth 13 14 15 16 17' },
-  { title: 'This Is Quitting (vape, ages 13–24)', tab: 'resources', desc: 'Text DITCHVAPE to 88709', keywords: 'this is quitting vape truth ditchvape' },
-  { title: 'Mayo Clinic NRT Dosing', tab: 'resources', href: 'pages/penn-state-index.html', desc: 'Penn State Index — simplified dosing', keywords: 'mayo clinic penn state index simplified NRT dosing' },
+  { title: 'NDQuits (ages 18–21)', tab: 'resources', desc: '1-800-QUIT-NOW · feasible counseling option for 18–21', keywords: 'NDQuits quitline 1-800-QUIT-NOW 18 19 20 21' },
+  { title: 'AAP Youth Cessation Toolkit', tab: 'resources', desc: 'Primary clinical resource — off-label NRT, scripts, screening', keywords: 'AAP american academy pediatrics toolkit primary clinical guidance' },
+  { title: 'My Life, My Quit (supportive, ages 13–17)', tab: 'resources', desc: 'Text "Start My Quit" to 36072 — supportive, not stand-alone', keywords: 'mylifemyquit my life my quit text teen youth 13 14 15 16 17 supportive' },
+  { title: 'This Is Quitting (supportive, ages 13–24)', tab: 'resources', desc: 'Text DITCHVAPE to 88709', keywords: 'this is quitting vape truth ditchvape supportive' },
+  { title: 'Mayo Clinic NRT Dosing (secondary resource)', tab: 'resources', href: 'pages/penn-state-index.html', desc: 'Penn State Index — simplified dosing', keywords: 'mayo clinic penn state index simplified NRT dosing' },
+
+  { title: 'Medication / Pharmacotherapy', tab: 'pharmacotherapy', desc: 'NRT, bupropion, varenicline by age; AAP + Mayo dosing', keywords: 'medication pharmacotherapy drug NRT patch gum lozenge bupropion varenicline dosing off-label AAP mayo' },
 
   { title: 'CME: The Landscape', tab: 'cme', href: 'pages/cme-1.html', desc: '0.25 CME · 3–5 min', keywords: 'cme landscape prevalence' },
   { title: 'CME: Health Reasons to Quit', tab: 'cme', href: 'pages/cme-health-effects.html', desc: '0.25 CME · health effects of vaping', keywords: 'cme health effects vape vaping reasons quit' },
@@ -278,7 +291,7 @@ const SEARCH_INDEX = [
   { title: 'CME: Vape & Pouch Dosing', tab: 'cme', href: 'pages/cme-4.html', desc: '0.25 CME · NRT equivalents', keywords: 'cme vape pouch dosing' },
   { title: 'CME: Adolescent-Friendly Services', tab: 'cme', href: 'pages/cme-adolescent-friendly.html', desc: '0.25 CME · communication & confidentiality', keywords: 'cme adolescent friendly communication confidentiality rapport teen' },
   { title: 'CME: Systems Change & EHR Integration', tab: 'cme', href: 'pages/cme-ehr-integration.html', desc: '0.5 CME · workflow templates', keywords: 'cme ehr systems change workflow integration template' },
-  { title: 'CME: Referral & Follow-up', tab: 'cme', href: 'pages/cme-5.html', desc: '0.25 CME · NDQuits triage', keywords: 'cme referral follow-up' },
+  { title: 'CME: Counseling Referral & Follow-up', tab: 'cme', href: 'pages/cme-5.html', desc: '0.25 CME · counseling referral, closing the loop', keywords: 'cme referral follow-up counseling' },
   { title: 'CME: Algorithm Walkthrough', tab: 'cme', href: 'pages/cme-6.html', desc: '+0.25 CME · UpToDate style', keywords: 'cme algorithm walkthrough' },
 
   { title: 'Printable Standing Order', tab: 'standing', desc: 'Pre-filled NRT order, indications, follow-up', keywords: 'standing order print rx patch gum lozenge bupropion varenicline' },

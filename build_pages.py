@@ -6,7 +6,7 @@ Spelling: NDQuits (one word) per ND Health & Human Services convention.
 """
 import pathlib, datetime
 
-LAST_UPDATED = "June 10, 2026"
+LAST_UPDATED = "October 5, 2026"
 
 TEMPLATE = """<!DOCTYPE html>
 <html lang="en">
@@ -323,23 +323,40 @@ For patients &lt; 18, doses are off-label — start one strength lower and consu
 
     "counselor-directory.html": {
         "section": "Treatment Algorithm · Step 4",
-        "title": "ND Cessation Counselor Directory",
-        "lede": "Cessation counselors and behavioral health providers serving North Dakota — minimum patient age listed for each.",
+        "title": "Counseling Options &amp; Directory",
+        "lede": "The goal is for providers to address the need for counseling — in your own practice or by referral to one-on-one counseling.",
         "body": """
+<div class="callout"><strong>Counseling comes first.</strong> Deliver one-on-one cessation counseling in your practice, or refer the patient to a one-on-one cessation counselor. Medication is added alongside counseling when indicated.</div>
+
+<h3>Options</h3>
 <table>
-<thead><tr><th>Provider</th><th>Region</th><th>Min age</th><th>Modality</th><th>Contact</th></tr></thead>
+<thead><tr><th>Option</th><th>Ages</th><th>Modality</th><th>Contact</th></tr></thead>
 <tbody>
-<tr><td>NDQuits</td><td>Statewide</td><td>All ages (routes by age)</td><td>Phone / text</td><td>1-800-QUIT-NOW</td></tr>
-<tr><td>MyLifeMyQuit (via NDQuits)</td><td>Statewide</td><td>13–17</td><td>Text / chat</td><td>Text "Start My Quit" to 36072</td></tr>
-<tr><td>Fargo Cass Public Health</td><td>Cass County</td><td>All ages</td><td>In-person + tele</td><td>(701) 241-1383</td></tr>
-<tr><td>Bismarck-Burleigh Public Health</td><td>Burleigh / Morton</td><td>All ages</td><td>In-person</td><td>(701) 355-1540</td></tr>
-<tr><td>Grand Forks Public Health</td><td>Grand Forks</td><td>All ages</td><td>In-person</td><td>(701) 787-8100</td></tr>
-<tr><td>First District Health Unit</td><td>Minot / NW ND</td><td>All ages</td><td>In-person + tele</td><td>(701) 852-1376</td></tr>
-<tr><td>Custer Health</td><td>S Central ND</td><td>All ages</td><td>In-person</td><td>(701) 667-3370</td></tr>
+<tr><td>Counseling in your own practice</td><td>All ages</td><td>In-person / tele</td><td>—</td></tr>
+<tr><td>Referral to a one-on-one cessation counselor</td><td>All ages</td><td>In-person / tele</td><td>Use your facility's internal directory</td></tr>
+<tr><td>NDQuits</td><td>18–21 (feasible)</td><td>Phone / text</td><td>1-800-QUIT-NOW</td></tr>
+<tr><td>My Life, My Quit <em>(supportive only)</em></td><td>13–17</td><td>Text / chat</td><td>Text "Start My Quit" to 36072</td></tr>
 </tbody>
 </table>
 
-<div class="callout">When in doubt, call <strong>NDQuits (1-800-QUIT-NOW)</strong>. They will route the patient to the closest counselor and handle scheduling — and they cover all ages.</div>
+<div class="callout"><strong>Supportive, not stand-alone.</strong> My Life, My Quit offers motivation and education for youth working on nicotine addiction. Do not treat it as a stand-alone referral. NDQuits is a feasible option for ages 18–21; it is not the youth treatment resource for younger patients.</div>
+
+<h3>Provider list — in development</h3>
+<p>Local public health units are not direct youth treatment resources and will look to this initiative for guidance. Part of this project is to identify counseling providers clinicians can use as a resource; this list will be added here.</p>
+
+<details>
+<summary>Public health unit contacts (reference only — not youth treatment resources)</summary>
+<table>
+<thead><tr><th>Unit</th><th>Region</th><th>Contact</th></tr></thead>
+<tbody>
+<tr><td>Fargo Cass Public Health</td><td>Cass County</td><td>(701) 241-1383</td></tr>
+<tr><td>Bismarck-Burleigh Public Health</td><td>Burleigh / Morton</td><td>(701) 355-1540</td></tr>
+<tr><td>Grand Forks Public Health</td><td>Grand Forks</td><td>(701) 787-8100</td></tr>
+<tr><td>First District Health Unit</td><td>Minot / NW ND</td><td>(701) 852-1376</td></tr>
+<tr><td>Custer Health</td><td>S Central ND</td><td>(701) 667-3370</td></tr>
+</tbody>
+</table>
+</details>
 
 <p class="muted">Facility-specific tobacco treatment specialists (CHI, Sanford, Essentia) are intentionally not listed here to keep this directory universally applicable and easy to maintain. Contact your facility's internal directory for in-system referrals.</p>
 """
@@ -347,10 +364,12 @@ For patients &lt; 18, doses are off-label — start one strength lower and consu
 
     "enroll-patient.html": {
         "section": "Treatment Algorithm · Step 4",
-        "title": "Enroll a Patient in Digital / Text Support",
-        "lede": "Three-step enrollment to free, evidence-based text-message support programs.",
+        "title": "Supportive Text Programs",
+        "lede": "Free text-message programs that add motivation and education alongside clinical care.",
         "body": """
-<h3>MyLifeMyQuit (ages 13–17)</h3>
+<div class="callout"><strong>Supportive, not stand-alone.</strong> These programs support treatment. They are not a substitute for one-on-one counseling or a stand-alone referral — pair them with counseling you provide or refer to.</div>
+
+<h3>My Life, My Quit (ages 13–17)</h3>
 <ol>
   <li>Patient texts <strong>"Start My Quit"</strong> to <strong>36072</strong>.</li>
   <li>Coach replies within minutes; sessions are confidential.</li>
@@ -375,8 +394,8 @@ For patients &lt; 18, doses are off-label — start one strength lower and consu
 
     "referral-form.html": {
         "section": "Treatment Algorithm · Step 5",
-        "title": "Print Referral Form",
-        "lede": "Standard one-page referral to NDQuits. Fax to 1-800-483-3114 or eFax through your EHR.",
+        "title": "Print NDQuits Referral Form (Ages 18–21)",
+        "lede": "Standard one-page referral to NDQuits, a feasible counseling option for patients ages 18–21. Fax to 1-800-483-3114 or eFax through your EHR. For younger patients, refer to one-on-one counseling.",
         "body": """
 <table>
 <thead><tr><th>Field</th><th>Entry</th></tr></thead>
@@ -424,12 +443,12 @@ For patients &lt; 18, doses are off-label — start one strength lower and consu
 <h3>Step 4 — Treat</h3>
 <ul>
   <li>Pharmacotherapy — dose by Penn State Index or product translator.</li>
-  <li>Counseling — ND public health units or NDQuits coaches.</li>
-  <li>Digital / text — MyLifeMyQuit, This Is Quitting.</li>
+  <li>Counseling — provide one-on-one counseling in your practice, or refer. NDQuits is an option for ages 18–21.</li>
+  <li>Supportive resources — MyLifeMyQuit, This Is Quitting (not stand-alone referrals).</li>
 </ul>
 
 <h3>Step 5 — Refer &amp; follow up</h3>
-<p><strong>NDQuits: 1-800-QUIT-NOW</strong> · Follow-up in 2–4 weeks · Document plan.</p>
+<p>Refer to one-on-one counseling if not delivered in your practice · <strong>NDQuits 1-800-QUIT-NOW</strong> for ages 18–21 · Follow-up in 2–4 weeks · Document plan.</p>
 
 <div class="callout"><strong>⚠ Printed copy?</strong> Check the dashboard for the latest version. This page was last updated """ + LAST_UPDATED + """.</div>
 """
@@ -592,12 +611,12 @@ For patients &lt; 18, doses are off-label — start one strength lower and consu
     },
     "cme-5.html": {
         "section": "CME Module",
-        "title": "9. Referral &amp; Follow-up",
+        "title": "9. Counseling Referral &amp; Follow-up",
         "lede": "0.25 AMA PRA Category 1 Credit™ · 3–5 minutes",
         "body": """
 <h3>Learning objectives</h3>
 <ul>
-  <li>Use NDQuits as a single-call triage line.</li>
+  <li>Provide or refer to one-on-one counseling, and know when NDQuits (ages 18–21) is a feasible option.</li>
   <li>Build a follow-up workflow that closes the "ask → treat" gap.</li>
 </ul>
 <button class="primary">Start module</button>

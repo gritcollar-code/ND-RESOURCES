@@ -4,7 +4,7 @@
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 <title>NDQuits Youth Treatment Initiative — Clinician Dashboard</title>
-<link rel="stylesheet" href="styles.css?v=144" />
+<link rel="stylesheet" href="styles.css?v=150" />
 </head>
 <body>
 <header class="topbar">
@@ -18,6 +18,7 @@
   <nav class="tabs">
     <button class="tab active" data-tab="overview">Overview</button>
     <button class="tab" data-tab="algorithm">Treatment Algorithm</button>
+    <button class="tab" data-tab="pharmacotherapy">Medication / Pharmacotherapy</button>
     <button class="tab" data-tab="resources">Resources Hub</button>
     <button class="tab" data-tab="cme">CME Module</button>
     <button class="tab" data-tab="standing">Standing Orders</button>
@@ -36,25 +37,25 @@
 
   <div class="start-here">
     <div class="start-here-tag">▼ START HERE ▼</div>
-    <h2>Call NDQuits</h2>
-    <p class="phone">1-800-QUIT-NOW</p>
-    <p>One umbrella line. Routes patients automatically to the right youth or adult program — MyLifeMyQuit, local public-health units, counselor referral, or NRT support. Most clinical questions start and end here.</p>
+    <h2>Address the need for counseling</h2>
+    <p>Providers are the front line for youth nicotine treatment. Deliver one-on-one counseling in your own practice, or refer to one-on-one counseling — then add medication when it is indicated.</p>
+    <p class="start-here-note"><strong>NDQuits (1-800-QUIT-NOW)</strong> is a feasible option for patients ages <strong>18–21</strong>. It is not intended as the treatment resource for younger youth.</p>
     <div class="start-here-actions">
-      <a class="primary-link" href="https://nd.quitlogix.org/" target="_blank" rel="noopener">Visit NDQuits portal →</a>
-      <a class="ghost-link" href="#algorithm" data-jump="algorithm">Open Treatment Algorithm</a>
+      <a class="primary-link" href="#algorithm" data-jump="algorithm">Open Treatment Algorithm →</a>
+      <a class="ghost-link" href="#pharmacotherapy" data-jump="pharmacotherapy">Medication / Pharmacotherapy</a>
     </div>
   </div>
 
   <div class="hero">
     <h2>A simpler path from <em>ask</em> to <em>treat</em>.</h2>
-    <p>One umbrella. One algorithm. One phone number. Built around the priorities your advisory council laid out and refined through advisory committee meetings.</p>
+    <p>One algorithm. A counseling-first pathway. Built around the priorities your advisory council laid out and refined through advisory committee meetings.</p>
   </div>
 
   <div class="two-col">
     <div class="card">
       <h2>Advisory Council Priorities</h2>
       <ul class="checklist">
-        <li><strong>One umbrella resource</strong> — single entry point (NDQuits) that routes to all paths.</li>
+        <li><strong>Counseling-first pathway</strong> — providers deliver or refer to one-on-one counseling; NDQuits is an option for ages 18–21.</li>
         <li><strong>Click-through algorithm</strong> with hyperlinks for dosing, off-label evidence, referrals, and parental consent.</li>
         <li><strong>Interactive flowchart</strong> with a "Try a Sample Patient" sandbox.</li>
         <li><strong>Printable pathways &amp; standing orders</strong> embedded in workflow.</li>
@@ -69,7 +70,7 @@
       <h2>Where to focus next</h2>
       <div class="gap"><span class="badge">Priority</span> Build clinician awareness that most youth users <em>want</em> to quit.</div>
       <div class="gap"><span class="badge">Priority</span> Educate on AAP off-label NRT recommendation for youth.</div>
-      <div class="gap"><span class="badge soft">Opportunity</span> Improve awareness of national resources beyond NDQuits.</div>
+      <div class="gap"><span class="badge soft">Opportunity</span> Identify counseling providers clinicians can refer youth to.</div>
       <div class="gap"><span class="badge soft">Opportunity</span> Close the "Ask &amp; Advise → Treat &amp; Refer" cliff.</div>
       <div class="gap"><span class="badge soft">Opportunity</span> EHRs that capture full range of nicotine/vape products.</div>
       <div class="gap"><span class="badge">Priority</span> Pharmacist scope-of-practice for &lt; 18 prescribing.</div>
@@ -80,13 +81,14 @@
     <h2>Quick Actions</h2>
     <div class="action-row">
       <a class="action" href="#algorithm" data-jump="algorithm"><b>1</b><span>Open Treatment Algorithm</span></a>
-      <a class="action" href="#resources" data-jump="resources"><b>2</b><span>Call NDQuits / Refer</span></a>
-      <a class="action" href="#standing" data-jump="standing"><b>3</b><span>Print Standing Order</span></a>
-      <a class="action" href="#cme" data-jump="cme"><b>4</b><span>Claim Free CME</span></a>
+      <a class="action" href="#pharmacotherapy" data-jump="pharmacotherapy"><b>2</b><span>Medication / Pharmacotherapy</span></a>
+      <a class="action" href="#resources" data-jump="resources"><b>3</b><span>Resources &amp; Referral</span></a>
+      <a class="action" href="#standing" data-jump="standing"><b>4</b><span>Print Standing Order</span></a>
+      <a class="action" href="#cme" data-jump="cme"><b>5</b><span>Claim Free CME</span></a>
     </div>
   </div>
 
-  <p class="updated">Last updated: June 10, 2026 · v1.4</p>
+  <p class="updated">Last updated: October 5, 2026 · v1.5</p>
 </section>
 
 <!-- ============== ALGORITHM ============== -->
@@ -191,8 +193,8 @@
 
       <button class="node finish" data-info="refer">
         <span class="node-tag">STEP 5</span>
-        <strong>Refer NDQuits + follow up</strong>
-        <small>1-800-QUIT-NOW · re-check 2–4 wk</small>
+        <strong>Refer for counseling + follow up</strong>
+        <small>NDQuits (18–21) · re-check 2–4 wk</small>
       </button>
 
     </div>
@@ -271,7 +273,7 @@
             </div>
             <div class="age-card">
               <h4>18 – 21</h4>
-              <p>Full NRT, varenicline, bupropion eligible. No parental consent. Refer NDQuits.</p>
+              <p>Full NRT, varenicline, bupropion eligible. No parental consent. NDQuits (1-800-QUIT-NOW) is a feasible counseling option for this age group.</p>
               <a href="pages/adult-rx.html" class="link">Adult Rx quick-reference</a>
               <a href="#algo-step-4" class="link forward">Continue to treatment ▶</a>
             </div>
@@ -290,18 +292,19 @@
               <a href="pages/penn-state-index.html" class="link">⭐ Penn State Index (Mayo Clinic approach)</a>
               <a href="pages/dosing-table.html" class="link">Adult NRT dosing table</a>
               <a href="pages/aap-nrt-evidence.html" class="link">Off-label NRT for &lt; 18 (AAP)</a>
+              <a href="#pharmacotherapy" class="link" data-jump="pharmacotherapy">All medication info ▶</a>
               <a href="#standing" class="link forward" data-jump="standing">🖨 Print standing order ▶</a>
             </div>
             <div class="tx">
-              <h4>Counseling</h4>
-              <p>Find a cessation counselor (in-network / tele).</p>
-              <a href="pages/counselor-directory.html" class="link">ND counselor directory</a>
+              <h4>One-on-One Counseling</h4>
+              <p>Provide counseling in your practice, or refer youth to a one-on-one cessation counselor (in-network / tele). NDQuits is an option for ages 18–21.</p>
+              <a href="pages/counselor-directory.html" class="link">Counseling options &amp; directory</a>
               <a href="#algo-step-5" class="link forward">Continue ▶</a>
             </div>
             <div class="tx">
-              <h4>Digital / Text Support</h4>
-              <p>MyLifeMyQuit (youth), This Is Quitting, NDQuits callbacks.</p>
-              <a href="pages/enroll-patient.html" class="link">Enroll patient</a>
+              <h4>Supportive Resources</h4>
+              <p>My Life, My Quit and This Is Quitting offer motivation and education. They <strong>support</strong> treatment — they are not a stand-alone referral.</p>
+              <a href="pages/enroll-patient.html" class="link">Supportive text programs</a>
               <a href="#algo-step-5" class="link forward">Continue ▶</a>
             </div>
           </div>
@@ -312,10 +315,10 @@
         <div class="step-num">5</div>
         <div class="step-body">
           <h3>Refer &amp; Follow up</h3>
-          <p>One call to <strong>NDQuits 1-800-QUIT-NOW</strong> — they triage automatically.</p>
+          <p>If counseling is not delivered in your practice, refer to one-on-one counseling. For patients ages 18–21, <strong>NDQuits 1-800-QUIT-NOW</strong> is a feasible option.</p>
           <p>Schedule follow-up in 2–4 weeks. Document plan.</p>
           <div class="links">
-            <a href="pages/referral-form.html" class="link">Print referral form</a>
+            <a href="pages/referral-form.html" class="link">Print NDQuits referral form (ages 18–21)</a>
             <a href="#standing" class="link" data-jump="standing">Print standing order</a>
           </div>
         </div>
@@ -327,7 +330,7 @@
       <a class="primary" href="pages/screening-pathway-print.html">🖨 Print full algorithm + screening questions</a>
       <button class="ghost" onclick="window.print()">Print this view</button>
     </div>
-    <p class="updated">Last updated: June 10, 2026</p>
+    <p class="updated">Last updated: October 5, 2026</p>
   </div>
 
   <!-- Modal for flowchart node info -->
@@ -340,57 +343,96 @@
 
 </section>
 
+<!-- ============== PHARMACOTHERAPY ============== -->
+<section id="pharmacotherapy" class="panel">
+  <div class="card">
+    <h2>Medication / Pharmacotherapy</h2>
+    <p class="muted">One place for nicotine treatment medication information. Medication works best <strong>alongside</strong> one-on-one counseling — not instead of it.</p>
+    <p class="note-box"><strong>Draft:</strong> dosing details are pending clinical review. Confirm against current guidance before clinical use.</p>
+
+    <h3 class="section-label">Clinical guidance &amp; dosing</h3>
+    <div class="res-grid">
+      <div class="res-card is-primary">
+        <h3>AAP guidance</h3>
+        <p class="tag primary">Primary</p>
+        <p>NRT may be considered off-label for adolescents who are moderately-to-severely dependent and motivated to quit. Selection criteria, safety, and consent.</p>
+        <a href="pages/aap-nrt-evidence.html" class="link">AAP off-label NRT evidence ▶</a>
+      </div>
+      <div class="res-card">
+        <h3>Mayo Clinic dosing</h3>
+        <p class="tag">Secondary · Dosing</p>
+        <p>Penn State Dependence Index — dose from a single score, no product-by-product nicotine math.</p>
+        <a href="pages/penn-state-index.html" class="link">Penn State Index ▶</a>
+        <a href="pages/nrt-translator.html" class="link">Vape / pouch → NRT translator ▶</a>
+      </div>
+      <div class="res-card">
+        <h3>Adult dosing &amp; Rx (18–21)</h3>
+        <p class="tag">Ages 18+</p>
+        <p>Starting doses, duration, and taper for FDA-approved agents.</p>
+        <a href="pages/adult-rx.html" class="link">Adult Rx quick-reference ▶</a>
+        <a href="pages/dosing-table.html" class="link">Adult NRT dosing table ▶</a>
+      </div>
+    </div>
+
+    <h3 class="section-label">Medication by age</h3>
+    <table class="data-table">
+      <thead><tr><th>Age</th><th>Approach</th><th>Consent</th></tr></thead>
+      <tbody>
+        <tr><td><strong>Under 14</strong></td><td>Counseling + family-based intervention first. Pharmacotherapy is rarely first-line.</td><td>Parental consent required</td></tr>
+        <tr><td><strong>14 – 17</strong></td><td>Behavioral first. Off-label NRT per AAP if moderately-to-severely dependent and motivated. Bupropion and varenicline are not recommended.</td><td>Parental consent generally required in ND</td></tr>
+        <tr><td><strong>18 – 21</strong></td><td>NRT, bupropion, and varenicline all eligible. Combination NRT (patch + short-acting) is preferred for moderate-to-heavy users.</td><td>No parental consent needed</td></tr>
+      </tbody>
+    </table>
+
+    <h3 class="section-label">Medication options</h3>
+    <table class="data-table">
+      <thead><tr><th>Agent</th><th>Under 18</th><th>Ages 18–21</th><th>Notes</th></tr></thead>
+      <tbody>
+        <tr><td>Nicotine patch</td><td>Off-label (AAP)</td><td>Eligible</td><td>Monitor skin irritation, sleep disturbance, vivid dreams.</td></tr>
+        <tr><td>Nicotine gum</td><td>Off-label (AAP)</td><td>Eligible</td><td>Park-and-chew technique.</td></tr>
+        <tr><td>Nicotine lozenge</td><td>Off-label (AAP)</td><td>Eligible</td><td>Do not chew or swallow.</td></tr>
+        <tr><td>Bupropion SR</td><td>Not recommended</td><td>Eligible</td><td>Avoid with seizure history or eating disorders.</td></tr>
+        <tr><td>Varenicline</td><td>Not recommended</td><td>Eligible</td><td>Highest single-agent quit rate. Monitor neuropsychiatric effects.</td></tr>
+      </tbody>
+    </table>
+
+    <div class="print-row">
+      <a class="primary" href="#standing" data-jump="standing">🖨 Printable standing order</a>
+      <a class="ghost" href="#algorithm" data-jump="algorithm">◀ Back to Treatment Algorithm</a>
+    </div>
+    <p class="muted" style="margin-top:14px;">Document shared decision-making in the chart for all patients under 18.</p>
+    <p class="updated">Last updated: October 5, 2026</p>
+  </div>
+</section>
+
 <!-- ============== RESOURCES ============== -->
 <section id="resources" class="panel">
 
   <div class="start-here resources-hero">
     <div class="start-here-tag">▼ START HERE ▼</div>
-    <h2>NDQuits — the one-stop line</h2>
-    <p class="phone">1-800-QUIT-NOW</p>
-    <p>NDQuits is the umbrella entry point. It routes patients to MyLifeMyQuit, National Jewish coaches, or local public health units based on age and product. <strong>One call covers it all.</strong></p>
+    <h2>Counseling comes first</h2>
+    <p>The goal of this initiative is for providers to address the need for counseling — delivering it in your own practice or referring to one-on-one counseling. Use the resources below to support that work.</p>
+    <p class="start-here-note"><strong>NDQuits (1-800-QUIT-NOW)</strong> is a feasible option for patients ages <strong>18–21</strong>.</p>
     <div class="start-here-actions">
-      <a href="https://nd.quitlogix.org/" target="_blank" rel="noopener" class="primary-link">Visit NDQuits portal →</a>
+      <a href="https://nd.quitlogix.org/" target="_blank" rel="noopener" class="primary-link">Visit NDQuits portal (ages 18–21) →</a>
     </div>
   </div>
 
-  <h3 class="section-label">Additional resources clinicians can recommend directly</h3>
+  <h3 class="section-label">Clinical guidance</h3>
 
   <div class="res-grid">
-    <div class="res-card">
-      <h3>MyLifeMyQuit</h3>
-      <p class="tag">Ages 13–17 · Text/Chat</p>
-      <p>Free, confidential coaching for teens. Text "Start My Quit" to 36072.</p>
-      <a href="https://mylifemyquit.org" target="_blank" rel="noopener" class="link">Open ▶</a>
-    </div>
-    <div class="res-card">
-      <h3>This Is Quitting (Truth)</h3>
-      <p class="tag">Ages 13–24 · Vape-specific</p>
-      <p>Text-based program built specifically for vape cessation.</p>
-      <a href="https://truthinitiative.org/thisisquitting" target="_blank" rel="noopener" class="link">Open ▶</a>
-    </div>
-    <div class="res-card">
-      <h3>Smokefree.gov — Teen</h3>
-      <p class="tag">Ages 13+ · Self-help</p>
-      <p>SmokefreeTXT for teens, quit-plan generator.</p>
-      <a href="https://teen.smokefree.gov" target="_blank" rel="noopener" class="link">Open ▶</a>
-    </div>
-    <div class="res-card">
+    <div class="res-card is-primary">
       <h3>AAP Youth Cessation Toolkit</h3>
-      <p class="tag">Clinical guidance · All ages</p>
+      <p class="tag primary">Primary resource · Clinical guidance</p>
       <p>Off-label NRT recommendations, scripts, and screening tools.</p>
       <a href="https://www.aap.org/en/patient-care/tobacco-control-and-prevention/youth-tobacco-cessation/" target="_blank" rel="noopener" class="link">Open ▶</a>
     </div>
     <div class="res-card">
       <h3>Mayo Clinic NRT Dosing</h3>
-      <p class="tag">Ages 18+ (off-label for younger) · Simplified dosing</p>
-      <p>Uses the Penn State Cigarette Dependence Index — no product-by-product nicotine math required.</p>
-      <a href="pages/penn-state-index.html" class="link">Open ▶</a>
-    </div>
-    <div class="res-card">
-      <h3>ND Local Public Health Units</h3>
-      <p class="tag">All ages · In-person + tele</p>
-      <p>County-level cessation programs and referrals.</p>
-      <a href="pages/counselor-directory.html" class="link">Open ▶</a>
+      <p class="tag">Secondary resource · Simplified dosing</p>
+      <p>Uses the Penn State Cigarette Dependence Index — no product-by-product nicotine math required. Linked to dosing in the Medication / Pharmacotherapy section.</p>
+      <a href="pages/penn-state-index.html" class="link">Open dosing ▶</a>
+      <a href="#pharmacotherapy" class="link" data-jump="pharmacotherapy">Medication / Pharmacotherapy ▶</a>
     </div>
     <div class="res-card">
       <h3>USPHS 5 A's / AAR Model</h3>
@@ -398,13 +440,33 @@
       <p>Ask, Advise, Assess, Assist, Arrange — clinical workflow.</p>
       <a href="pages/screening-script.html" class="link">Open ▶</a>
     </div>
+  </div>
+
+  <h3 class="section-label">Supportive resources — not stand-alone referrals</h3>
+  <p class="muted" style="margin:-4px 0 12px 0;">These offer motivation and education to youth working on nicotine addiction. Use them to <strong>support</strong> counseling and treatment, not in place of it.</p>
+
+  <div class="res-grid">
     <div class="res-card">
-      <h3>Not On Tobacco (N-O-T)</h3>
-      <p class="tag">Ages 14–19 · Group program</p>
-      <p>10-session group program from American Lung Association.</p>
-      <a href="https://www.lung.org/quit-smoking/helping-teens-quit/not-on-tobacco" target="_blank" rel="noopener" class="link">Open ▶</a>
+      <h3>My Life, My Quit</h3>
+      <p class="tag">Supportive · Ages 13–17 · Text/Chat</p>
+      <p>Free, confidential coaching for teens. Text "Start My Quit" to 36072.</p>
+      <a href="https://mylifemyquit.org" target="_blank" rel="noopener" class="link">Open ▶</a>
+    </div>
+    <div class="res-card">
+      <h3>This Is Quitting (Truth)</h3>
+      <p class="tag">Supportive · Ages 13–24 · Vape-specific</p>
+      <p>Text-based program built specifically for vape cessation.</p>
+      <a href="https://truthinitiative.org/thisisquitting" target="_blank" rel="noopener" class="link">Open ▶</a>
+    </div>
+    <div class="res-card">
+      <h3>Smokefree.gov — Teen</h3>
+      <p class="tag">Supportive · Ages 13+ · Self-help</p>
+      <p>SmokefreeTXT for teens, quit-plan generator.</p>
+      <a href="https://teen.smokefree.gov" target="_blank" rel="noopener" class="link">Open ▶</a>
     </div>
   </div>
+
+  <p class="muted note-line">Local public health units are not direct youth treatment resources and will look to this initiative for guidance. A list of counseling providers clinicians can use as a resource is in development.</p>
 
   <div class="card">
     <h3>Emerging Products Watch <span class="pill">Reviewed quarterly</span></h3>
@@ -416,7 +478,7 @@
     </ul>
   </div>
 
-  <p class="updated">Last updated: June 10, 2026</p>
+  <p class="updated">Last updated: October 5, 2026</p>
 </section>
 
 <!-- ============== CME ============== -->
@@ -476,8 +538,8 @@
       </a>
       <a class="cme-mod" href="pages/cme-5.html">
         <div class="cme-badge">0.25 CME</div>
-        <h3>9. Referral &amp; Follow-up</h3>
-        <p>Using NDQuits as a one-stop triage; closing the loop.</p>
+        <h3>9. Counseling Referral &amp; Follow-up</h3>
+        <p>Referring to one-on-one counseling (NDQuits for ages 18–21); closing the loop.</p>
         <span class="primary">Start ▶</span>
       </a>
       <a class="cme-mod special" href="pages/cme-6.html">
@@ -503,7 +565,7 @@
     </div>
   </div>
 
-  <p class="updated">Last updated: June 10, 2026</p>
+  <p class="updated">Last updated: October 5, 2026</p>
 </section>
 
 <!-- ============== STANDING ORDERS ============== -->
@@ -518,7 +580,7 @@
       <div class="order-header">
         <div>
           <h3>Youth Tobacco / Nicotine Cessation — Standing Order</h3>
-          <p class="muted">North Dakota Department of Health &amp; Human Services · NDQuits Youth Treatment Initiative · Draft v1.4</p>
+          <p class="muted">North Dakota Department of Health &amp; Human Services · NDQuits Youth Treatment Initiative · Draft v1.5</p>
         </div>
         <div class="order-meta">
           <div>Patient: ______________________</div>
@@ -542,10 +604,10 @@
       <label><input type="checkbox"/> Varenicline (≥ 18 only)</label>
 
       <h4>Referrals</h4>
-      <label><input type="checkbox"/> NDQuits 1-800-QUIT-NOW</label>
-      <label><input type="checkbox"/> MyLifeMyQuit (ages 13–17)</label>
-      <label><input type="checkbox"/> Local public health unit cessation program</label>
-      <label><input type="checkbox"/> Behavioral health counselor (cessation)</label>
+      <label><input type="checkbox"/> One-on-one cessation counseling provided in this practice</label>
+      <label><input type="checkbox"/> Referred to one-on-one cessation counseling — provider: ______________________</label>
+      <label><input type="checkbox"/> NDQuits 1-800-QUIT-NOW (ages 18–21)</label>
+      <label><input type="checkbox"/> Supportive resource (adjunct only): My Life, My Quit (ages 13–17)</label>
 
       <h4>Follow-up</h4>
       <label><input type="checkbox"/> 2-week follow-up</label>
@@ -568,16 +630,16 @@
       <button class="primary" onclick="window.print()">🖨 Print Standing Order</button>
       <a class="ghost" href="pages/dosing-table.html">◀ View Adult Dosing Table</a>
     </div>
-    <p class="updated">Last updated: June 10, 2026</p>
+    <p class="updated">Last updated: October 5, 2026</p>
   </div>
 </section>
 
 </main>
 
 <footer>
-  <p>NDQuits Youth Treatment Initiative · CEASE Grant · Built with the ACCESs NDQYT Advisory Committee · Last updated June 10, 2026 · <a href="https://github.com/gritcollar-code/ND-RESOURCES" target="_blank" rel="noopener">source</a></p>
+  <p>NDQuits Youth Treatment Initiative · CEASE Grant · Built with the ACCESs NDQYT Advisory Committee · Last updated October 5, 2026 · <a href="https://github.com/gritcollar-code/ND-RESOURCES" target="_blank" rel="noopener">source</a></p>
 </footer>
 
-<script src="script.js?v=144"></script>
+<script src="script.js?v=150"></script>
 </body>
 </html>

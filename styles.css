@@ -670,6 +670,33 @@ body.wide-algo main { max-width: min(1800px, calc(100vw - 24px)); }
   margin-left: 8px; letter-spacing: 0.5px; text-transform: uppercase;
 }
 
+/* ---------- Feedback additions (v1.5) ---------- */
+.start-here .start-here-note { margin-top: 12px; }
+.tag.primary { background: var(--gold); color: var(--green-900); }
+.res-card.is-primary { border: 2px solid var(--gold); }
+.res-card .link { display: block; margin-top: 8px; }
+.note-box {
+  background: var(--sand); border-left: 3px solid var(--gold);
+  padding: 10px 14px; border-radius: 4px; font-size: 13px;
+  color: var(--bark); margin: 12px 0 4px 0;
+}
+.note-line { font-size: 13px; margin: 4px 0 20px 0; }
+.data-table {
+  width: 100%; border-collapse: collapse; margin: 8px 0 18px 0; font-size: 13px;
+}
+.data-table th, .data-table td {
+  text-align: left; padding: 10px 12px; vertical-align: top;
+  border-bottom: 1px solid var(--line);
+}
+.data-table th {
+  background: var(--cream); color: var(--green-900); font-size: 11px;
+  text-transform: uppercase; letter-spacing: 0.5px; font-weight: 600;
+}
+.data-table tr:last-child td { border-bottom: none; }
+@media (max-width: 700px) {
+  .data-table { display: block; overflow-x: auto; }
+}
+
 /* ---------- CME ---------- */
 .cme-grid {
   display: grid; grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
