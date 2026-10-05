@@ -314,7 +314,7 @@ For patients &lt; 18, doses are off-label — start one strength lower and consu
 
 <div class="callout">Re-assess at 2 and 4 weeks. If still craving / using, <strong>increase</strong> dose rather than discontinue.</div>
 
-<div style="margin-top:24px;padding-top:18px;border-top:1px solid #E5DFD2;">
+<div style="margin-top:24px;padding-top:18px;border-top:1px solid #D9D6D0;">
   <a href="../index.html#standing" class="link forward">▶ Go to Printable Standing Order</a>
   &nbsp;<a href="../index.html#algorithm" class="link">◀ Back to Algorithm</a>
 </div>
