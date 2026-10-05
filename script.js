@@ -265,6 +265,8 @@ const SEARCH_INDEX = [
   { title: 'EHR Template / Dot Phrase', tab: 'algorithm', href: 'pages/ehr-template.html', desc: 'Smart phrase, ICD-10 codes', keywords: 'EHR Epic Cerner template ICD smart phrase F17 Z71' },
   { title: 'Vape & Pouch → NRT Translator', tab: 'algorithm', href: 'pages/nrt-translator.html', desc: 'JUUL, Elf Bar, Zyn → patch strength', keywords: 'vape pouch JUUL Elf Bar Zyn nicotine pod mg/day translator' },
   { title: 'Penn State Dependence Index ⭐', tab: 'algorithm', href: 'pages/penn-state-index.html', desc: 'Mayo Clinic simplified NRT dosing — no product math', keywords: 'penn state dependence index mayo clinic simplified NRT dosing' },
+  { title: 'CME Tier 1: AAP Recommendations & ACT, Off-Label NRT, E-cigarettes, Mental Health, Pouches', tab: 'cme', href: '', desc: 'Phase 1 modules — in development', keywords: 'cme tier 1 modules aap act off-label nrt e-cigarettes mental health nicotine pouches emerging products' },
+  { title: 'CME Tier 2: Oral medications, AAR/C, billing, EHR, systems change, MI', tab: 'cme', href: '', desc: 'Phase 2 modules — planned', keywords: 'cme tier 2 modules oral cessation medications screening billing coding documentation workflow ehr systems change standing orders motivational interviewing' },
   { title: 'Fagerström Dependence Scoring', tab: 'algorithm', href: 'pages/fagerstrom.html', desc: 'Scored dependence questions — cigarette & smokeless', keywords: 'fagerstrom fagerström dependence scoring questionnaire mayo nicotine dependence center smokeless chew dip' },
   { title: 'Motivational Interviewing Prompts', tab: 'algorithm', href: 'pages/mi-prompts.html', desc: 'MI scripts to elicit change talk', keywords: 'motivational interviewing MI change talk rulers' },
   { title: 'Family Conversation Guide', tab: 'algorithm', href: 'pages/family-guide.html', desc: 'For patients under 14 — household tobacco use', keywords: 'family guardian household 12 year old grandparent' },
@@ -288,16 +290,6 @@ const SEARCH_INDEX = [
 
   { title: 'Medication / Pharmacotherapy', tab: 'pharmacotherapy', desc: 'NRT, bupropion, varenicline by age; AAP + Mayo dosing', keywords: 'medication pharmacotherapy drug NRT patch gum lozenge bupropion varenicline dosing off-label AAP mayo' },
 
-  { title: 'CME: The Landscape', tab: 'cme', href: 'pages/cme-1.html', desc: '0.25 CME · 3–5 min', keywords: 'cme landscape prevalence' },
-  { title: 'CME: Health Reasons to Quit', tab: 'cme', href: 'pages/cme-health-effects.html', desc: '0.25 CME · health effects of vaping', keywords: 'cme health effects vape vaping reasons quit' },
-  { title: 'CME: Screening & Brief Intervention', tab: 'cme', href: 'pages/cme-2.html', desc: '0.25 CME · 5 As / MI', keywords: 'cme screening brief intervention 5 As MI' },
-  { title: 'CME: Penn State NRT Dosing ⭐', tab: 'cme', href: 'pages/cme-penn-state.html', desc: '0.25 CME · simplified dependence index', keywords: 'cme penn state dependence index mayo NRT' },
-  { title: 'CME: Off-Label NRT for Youth', tab: 'cme', href: 'pages/cme-3.html', desc: '0.25 CME · AAP guidance', keywords: 'cme off-label NRT youth AAP' },
-  { title: 'CME: Vape & Pouch Dosing', tab: 'cme', href: 'pages/cme-4.html', desc: '0.25 CME · NRT equivalents', keywords: 'cme vape pouch dosing' },
-  { title: 'CME: Adolescent-Friendly Services', tab: 'cme', href: 'pages/cme-adolescent-friendly.html', desc: '0.25 CME · communication & confidentiality', keywords: 'cme adolescent friendly communication confidentiality rapport teen' },
-  { title: 'CME: Systems Change & EHR Integration', tab: 'cme', href: 'pages/cme-ehr-integration.html', desc: '0.5 CME · workflow templates', keywords: 'cme ehr systems change workflow integration template' },
-  { title: 'CME: Counseling Referral & Follow-up', tab: 'cme', href: 'pages/cme-5.html', desc: '0.25 CME · counseling referral, closing the loop', keywords: 'cme referral follow-up counseling' },
-  { title: 'CME: Algorithm Walkthrough', tab: 'cme', href: 'pages/cme-6.html', desc: '+0.25 CME · UpToDate style', keywords: 'cme algorithm walkthrough' },
 
   { title: 'Printable Standing Order', tab: 'standing', desc: 'Pre-filled NRT order, indications, follow-up', keywords: 'standing order print rx patch gum lozenge bupropion varenicline' },
 ];

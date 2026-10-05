@@ -864,3 +864,6 @@ footer {
   content: ""; display: block; width: 56px; height: 4px;
   background: var(--navy-700); margin-top: 8px;
 }
+
+/* Placeholder CME cards: badge sits above the title instead of overlapping it */
+div.cme-mod .cme-badge { position: static; display: inline-block; margin-bottom: 8px; }
