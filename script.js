@@ -265,6 +265,7 @@ const SEARCH_INDEX = [
   { title: 'EHR Template / Dot Phrase', tab: 'algorithm', href: 'pages/ehr-template.html', desc: 'Smart phrase, ICD-10 codes', keywords: 'EHR Epic Cerner template ICD smart phrase F17 Z71' },
   { title: 'Vape & Pouch → NRT Translator', tab: 'algorithm', href: 'pages/nrt-translator.html', desc: 'JUUL, Elf Bar, Zyn → patch strength', keywords: 'vape pouch JUUL Elf Bar Zyn nicotine pod mg/day translator' },
   { title: 'Penn State Dependence Index ⭐', tab: 'algorithm', href: 'pages/penn-state-index.html', desc: 'Mayo Clinic simplified NRT dosing — no product math', keywords: 'penn state dependence index mayo clinic simplified NRT dosing' },
+  { title: 'Fagerström Dependence Scoring', tab: 'algorithm', href: 'pages/fagerstrom.html', desc: 'Scored dependence questions — cigarette & smokeless', keywords: 'fagerstrom fagerström dependence scoring questionnaire mayo nicotine dependence center smokeless chew dip' },
   { title: 'Motivational Interviewing Prompts', tab: 'algorithm', href: 'pages/mi-prompts.html', desc: 'MI scripts to elicit change talk', keywords: 'motivational interviewing MI change talk rulers' },
   { title: 'Family Conversation Guide', tab: 'algorithm', href: 'pages/family-guide.html', desc: 'For patients under 14 — household tobacco use', keywords: 'family guardian household 12 year old grandparent' },
   { title: 'AAP Off-Label NRT Evidence (14–17)', tab: 'algorithm', href: 'pages/aap-nrt-evidence.html', desc: 'Criteria, safety, parental consent', keywords: 'off-label NRT teen adolescent AAP 14 15 16 17' },

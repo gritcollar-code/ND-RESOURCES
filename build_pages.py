@@ -183,6 +183,58 @@ Follow-up: *** weeks
 """
     },
 
+    "fagerstrom.html": {
+        "section": "Resources · Assessing dependence",
+        "title": "Fagerström Dependence Scoring",
+        "lede": "Point-scored dependence questions for cigarette and smokeless tobacco users, from the Mayo Clinic Nicotine Dependence Center patient questionnaire.",
+        "body": """
+<div class="callout"><strong>How to score:</strong> add the points for the six questions in the section that matches the patient's product (0–10 total). This questionnaire covers cigarette and smokeless tobacco use. For a simpler score that also works for vapes and pouches, see the <a href="penn-state-index.html">Penn State Dependence Index</a>.</div>
+
+<h3>Cigarette users</h3>
+<table>
+<thead><tr><th>Question</th><th>Answer = points</th></tr></thead>
+<tbody>
+<tr><td>How soon after you wake up do you smoke your first cigarette?</td>
+  <td>Within 5 min = 3 · 6–30 min = 2 · 31–60 min = 1 · After 60 min = 0</td></tr>
+<tr><td>Do you find it difficult to refrain from smoking in places where it is forbidden (e.g., church)?</td>
+  <td>Yes = 1 · No = 0</td></tr>
+<tr><td>Which cigarette would you hate most to give up?</td>
+  <td>The first one in the morning = 1 · Any other = 0</td></tr>
+<tr><td>How many cigarettes per day do you smoke?</td>
+  <td>10 or less = 0 · 11–20 = 1 · 21–30 = 2 · 31 or more = 3</td></tr>
+<tr><td>Do you smoke more frequently during the first hours after waking than during the rest of the day?</td>
+  <td>Yes = 1 · No = 0</td></tr>
+<tr><td>Do you smoke if you are so ill that you are in bed most of the day?</td>
+  <td>Yes = 1 · No = 0</td></tr>
+</tbody>
+</table>
+
+<h3>Smokeless tobacco users</h3>
+<table>
+<thead><tr><th>Question</th><th>Answer = points</th></tr></thead>
+<tbody>
+<tr><td>How soon after you wake up do you place your first dip?</td>
+  <td>Within 5 min = 3 · 6–30 min = 2 · 31–60 min = 1 · After 60 min = 0</td></tr>
+<tr><td>How often do you intentionally swallow your tobacco juice?</td>
+  <td>Always = 2 · Sometimes = 1 · Never = 0</td></tr>
+<tr><td>Which chew would you hate to give up most?</td>
+  <td>The first one in the morning = 1 · Any other = 0</td></tr>
+<tr><td>How many cans/pouches per week do you use?</td>
+  <td>More than 3 = 2 · 2–3 = 1 · 1 = 0</td></tr>
+<tr><td>Do you chew more frequently during the first hours after waking than during the rest of the day?</td>
+  <td>Yes = 1 · No = 0</td></tr>
+<tr><td>Do you chew if you are so ill that you are in bed most of the day?</td>
+  <td>Yes = 1 · No = 0</td></tr>
+</tbody>
+</table>
+
+<h3>Also asked (not scored)</h3>
+<p>The original questionnaire also asks patients to check how they feel when they cannot use tobacco (e.g., irritability, craving, anxiety), when they use it (e.g., after eating, with coffee, when stressed), and which stressors they are dealing with now. These help plan counseling but do not add to the score.</p>
+
+<p class="muted">Source: Mayo Clinic Nicotine Dependence Center patient questionnaire (MC6003-38rev0207). Score interpretation is not included in the source document.</p>
+"""
+    },
+
     "mi-prompts.html": {
         "section": "Treatment Algorithm · Step 2A",
         "title": "Motivational Interviewing Prompts",
